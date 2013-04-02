@@ -1,0 +1,11 @@
+argparse==1.2.1
+distribute==0.6.35
+ipython==0.13.1
+matplotlib==1.2.1
+numpy==1.6.2
+pydot==1.0.28
+pymc==2.2
+pyparsing==1.5.6
+scikit-learn==0.13.1
+scipy==0.10.1
+wsgiref==0.1.2
