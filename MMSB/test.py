@@ -38,6 +38,7 @@ for person in range(num_people):
     person_pi = pymc.Dirichlet('pi_%i' % person, theta=alpha_vector)
     pi_list[person] = person_pi
 
+completed_pi_list = [pymc.CompletedDirichlet('completed_pi_%d' % i, dist) for i, dist in enumerate(pi_list)] 
 
 # Indicator variables of whether the pth person is in a group or not
 # DIMENSIONS: 1 x (num_people^2) for each list, where each element is Kx1
@@ -47,8 +48,8 @@ z_pTq_matrix = np.empty([num_people,num_people], dtype=object)
 z_pFq_matrix = np.empty([num_people,num_people], dtype=object)
 for p_person in range(num_people):
     for q_person in range(num_people):
-        z_pTq_matrix[p_person,q_person] = pymc.Multinomial('z_%dT%d_vector' % (p_person,q_person), n=1, p=pi_list[p_person])
-        z_pFq_matrix[p_person,q_person] = pymc.Multinomial('z_%dF%d_vector' % (p_person,q_person), n=1, p=pi_list[q_person])
+        z_pTq_matrix[p_person,q_person] = pymc.Multinomial('z_%dT%d_vector' % (p_person,q_person), n=1, p=pi_list[p_person], trace=False)
+        z_pFq_matrix[p_person,q_person] = pymc.Multinomial('z_%dF%d_vector' % (p_person,q_person), n=1, p=pi_list[q_person], trace=False)
 
 #---------------------------- Data Level ---------------------------------#
 # Combination of Priors to build the scalar parameter for y~Bernoulli
