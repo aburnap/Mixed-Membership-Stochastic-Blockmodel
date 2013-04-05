@@ -4,18 +4,33 @@
 #				Date: April 1, 2013
 ###############################################################################
 
-
-############################# Dependencies ####################################
-import MMBM.model as model
+#---------------------------- Dependencies -----------------------------------#
+import MMSB_model as model
+import pymc
 import numpy as np
 import matplotlib.pyplot as plt
-from Brians_modus_operandi import jigga_fresh_nasty as cur_method
 
-############################# Run Time Parameters #############################
+#---------------------------- Run Time Params --------------------------------#
 
 # Probably going to try and use - flag conventions with __init__(self, *args, **kwargs)
 
 
-############################# Load Data #######################################
-X=np.loadtxt("../data/Pi_alpha0.1_K5_N20.txt")
+#---------------------------- Load Data --------------------------------------#
+data_matrix=np.loadtxt("../data/Y_alpha0.1_K5_N20.txt")
+num_people = 20
+num_groups = 5
+alpha = np.ones(num_groups).ravel()*0.1
+B = np.eye(num_groups)*0.85
+B = B + np.random.random(size=[num_groups,num_groups])*0.1
+
+#---------------------------- Setup Model -----------------------------------#
+raw_model = model.create_model(data_matrix, num_people, num_groups, alpha, B)
+MC_model = pymc.Model(raw_model)
+#---------------------------- Call MAP to initialize MCMC -------------------#
+pymc.MAP(model).fit(method='fmin_powell')
+print '---------- Finished Running MAP to Set MCMC Initial Values ----------'
+#---------------------------- Run MCMC --------------------------------------#
+print '--------------------------- Starting MCMC ---------------------------'
+M = pymc.MCMC(model)
+M.sample(10000,5000, thin=5, verbose=0)
 
