@@ -1,0 +1,11 @@
+C:\Users\Maintenance\Documents\Visual Studio 2010\Projects\Samples\C#\MMSB\bin\Debug\MMSB.exe
+C:\Users\Maintenance\Documents\Visual Studio 2010\Projects\Samples\C#\MMSB\bin\Debug\MMSB.pdb
+C:\Users\Maintenance\Documents\Visual Studio 2010\Projects\Samples\C#\MMSB\bin\Debug\Infer.Compiler.dll
+C:\Users\Maintenance\Documents\Visual Studio 2010\Projects\Samples\C#\MMSB\bin\Debug\Infer.Runtime.dll
+C:\Users\Maintenance\Documents\Visual Studio 2010\Projects\Samples\C#\MMSB\bin\Debug\Infer.Compiler.pdb
+C:\Users\Maintenance\Documents\Visual Studio 2010\Projects\Samples\C#\MMSB\bin\Debug\Infer.Compiler.xml
+C:\Users\Maintenance\Documents\Visual Studio 2010\Projects\Samples\C#\MMSB\bin\Debug\Infer.Runtime.pdb
+C:\Users\Maintenance\Documents\Visual Studio 2010\Projects\Samples\C#\MMSB\bin\Debug\Infer.Runtime.xml
+C:\Users\Maintenance\Documents\Visual Studio 2010\Projects\Samples\C#\MMSB\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Maintenance\Documents\Visual Studio 2010\Projects\Samples\C#\MMSB\obj\x86\Debug\MMSB.exe
+C:\Users\Maintenance\Documents\Visual Studio 2010\Projects\Samples\C#\MMSB\obj\x86\Debug\MMSB.pdb

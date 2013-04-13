@@ -20,8 +20,11 @@ data_matrix=np.loadtxt("../data/Y_alpha0.1_K5_N20.txt")
 num_people = 20
 num_groups = 5
 alpha = np.ones(num_groups).ravel()*0.1
-B = np.eye(num_groups)*0.85
-B = B + np.random.random(size=[num_groups,num_groups])*0.1
+#B = np.eye(num_groups)*0.85
+#B = B + np.random.random(size=[num_groups,num_groups])*0.1
+
+B = np.eye(num_groups)*0.8
+B = B + np.ones([num_groups,num_groups])*0.2-np.eye(num_groups)*0.2
 
 #---------------------------- Setup Model -----------------------------------#
 raw_model = model.create_model(data_matrix, num_people, num_groups, alpha, B)

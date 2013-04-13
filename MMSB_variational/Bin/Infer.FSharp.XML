@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>Infer.FSharp</name></assembly>
+<members>
+<member name="M:MicrosoftResearch.Infer.FSharp.Factors.createDelegate(Microsoft.FSharp.Quotations.FSharpExpr)">
+<summary>
+ Create a delegate for declaring and registering a new Factor.
+ Takes an quotation of the factor function as an argument giving it type signature Expr-&gt;System.Delegate
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.Factors">
+<summary>
+ Provides method creating a delegate for declaring and registering a new Factor       
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Inference.InferBernoulliArray(MicrosoftResearch.Infer.InferenceEngine,MicrosoftResearch.Infer.Models.VariableArray{System.Boolean})">
+<summary>
+Infer a VariableArray&lt;bool&gt; as a.NET array of Bernoulli distributions  
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Inference.InferPoissonArray``1(MicrosoftResearch.Infer.InferenceEngine,MicrosoftResearch.Infer.Models.VariableArray{``0})">
+<summary>
+Infer a VariableArray&lt;int&gt; as a.NET array of Poisson distributions  
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Inference.InferDiscreteArray``1(MicrosoftResearch.Infer.InferenceEngine,MicrosoftResearch.Infer.Models.VariableArray{``0})">
+<summary>
+Infer a VariableArray&lt;int&gt; as a.NET array of Discrete distributions  
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Inference.InferGammaArray(MicrosoftResearch.Infer.InferenceEngine,MicrosoftResearch.Infer.Models.VariableArray{System.Double})">
+<summary>
+Infer a VariableArray&lt;float&gt; as a.NET array of Gamma distributions  
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Inference.InferBetaArray(MicrosoftResearch.Infer.InferenceEngine,MicrosoftResearch.Infer.Models.VariableArray{System.Double})">
+<summary>
+Infer a VariableArray&lt;float&gt; as a.NET array of Beta distributions  
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Inference.InferWishartArray(MicrosoftResearch.Infer.InferenceEngine,MicrosoftResearch.Infer.Models.VariableArray{MicrosoftResearch.Infer.Maths.PositiveDefiniteMatrix})">
+<summary>
+Infer a VariableArray&lt;PositiveDefiniteMatrix&gt; as a.NET array of Wishart distributions  
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Inference.InferDirichletArray(MicrosoftResearch.Infer.InferenceEngine,MicrosoftResearch.Infer.Models.VariableArray{MicrosoftResearch.Infer.Maths.Vector})">
+<summary>
+Infer a VariableArray&lt;Vector&gt; as a.NET array of Dirichlet distributions  
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Inference.InferVectorGaussianArray(MicrosoftResearch.Infer.InferenceEngine,MicrosoftResearch.Infer.Models.VariableArray{MicrosoftResearch.Infer.Maths.Vector})">
+<summary>
+Infer a VariableArray&lt;Vector&gt; as a.NET array of VectorGaussian distributions
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Inference.InferGaussianArray(MicrosoftResearch.Infer.InferenceEngine,MicrosoftResearch.Infer.Models.VariableArray{System.Double})">
+<summary>
+Infer a VariableArray&lt;float&gt; as a .NET array of Gaussian distributions
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.Inference">
+<summary>
+ Provides methods for Inferring .NET arrays of Distributions from a VariableArray&lt;T&gt; of a given Distribution
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Operators.op_GreaterGreaterEqualsEquals``3(``0,``1)">
+<summary>
+ Strictly Greater Than Operator
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Operators.op_LessLessEqualsEquals``3(``0,``1)">
+<summary>
+ Strictly Less Than Operator
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Operators.op_EqualsEquals``3(``0,``1)">
+<summary>
+ Equality Operator
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Operators.op_ComposeRight``3(``0,``1)">
+<summary>
+ Less Than Operator
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Operators.op_ComposeLeft``3(``0,``1)">
+<summary>
+ Greater Than Operator
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.Operators">
+<summary>
+ Provides operator overloads for comparison type Variable&lt;&apos;a&gt; with Variable&lt;&apos;a&gt; or type &apos;a returning type Variable&lt;bool&gt;
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Variable.AssignJagged1DVariableArray``1(MicrosoftResearch.Infer.Models.VariableArray{MicrosoftResearch.Infer.Models.VariableArray{``0},``0[][]},MicrosoftResearch.Infer.Models.Range,MicrosoftResearch.Infer.Models.Range,Microsoft.FSharp.Core.FSharpFunc`2{MicrosoftResearch.Infer.Models.Range,Microsoft.FSharp.Core.FSharpFunc`2{MicrosoftResearch.Infer.Models.Range,MicrosoftResearch.Infer.Models.Variable{``0}}})">
+<summary>
+ Apply the generator function f to a Jagged VariableArray of type &apos;a and Ranges r and s        
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Variable.AssignVariableArray2D``1(MicrosoftResearch.Infer.Models.VariableArray2D{``0},MicrosoftResearch.Infer.Models.Range,MicrosoftResearch.Infer.Models.Range,Microsoft.FSharp.Core.FSharpFunc`2{MicrosoftResearch.Infer.Models.Range,Microsoft.FSharp.Core.FSharpFunc`2{MicrosoftResearch.Infer.Models.Range,MicrosoftResearch.Infer.Models.Variable{``0}}})">
+<summary>
+ Apply the generator function f to a 2-Dimensional VariableArray of type &apos;a and Ranges r,s   
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Variable.AssignVariableArray``1(MicrosoftResearch.Infer.Models.VariableArray{``0},MicrosoftResearch.Infer.Models.Range,Microsoft.FSharp.Core.FSharpFunc`2{MicrosoftResearch.Infer.Models.Range,MicrosoftResearch.Infer.Models.Variable{``0}})">
+<summary>
+ Apply the generator function f to a VariableArray of type &apos;a and Range r   
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Variable.ArrayInit``1(MicrosoftResearch.Infer.Models.Range,Microsoft.FSharp.Core.FSharpFunc`2{MicrosoftResearch.Infer.Models.Range,MicrosoftResearch.Infer.Models.Variable{``0}})">
+<summary>
+ Creates a Variable Array of type &apos;a given the dimension and a generator function to compute the elements
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Variable.IfBlock(MicrosoftResearch.Infer.Models.Variable{System.Boolean},Microsoft.FSharp.Core.FSharpFunc`2{MicrosoftResearch.Infer.Models.Variable{System.Boolean},Microsoft.FSharp.Core.Unit},Microsoft.FSharp.Core.FSharpFunc`2{MicrosoftResearch.Infer.Models.Variable{System.Boolean},Microsoft.FSharp.Core.Unit})">
+<summary>
+ Calls function f1 if the argument Variable&lt;bool&gt; is true, and function f2 if argument Variable&lt;bool&gt; is false
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Variable.SwitchExpr``1(MicrosoftResearch.Infer.Models.Variable{System.Int32},Microsoft.FSharp.Core.FSharpFunc`2{MicrosoftResearch.Infer.Models.Variable{System.Int32},MicrosoftResearch.Infer.Models.Variable{``0}})">
+<summary>
+ Switch on Variable r and apply the function body, returning the result.
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Variable.SwitchBlock(MicrosoftResearch.Infer.Models.Variable{System.Int32},Microsoft.FSharp.Core.FSharpFunc`2{MicrosoftResearch.Infer.Models.Variable{System.Int32},Microsoft.FSharp.Core.Unit})">
+<summary>
+ Switch on Variable r and apply the function body
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Variable.ForeachBlock(MicrosoftResearch.Infer.Models.Range,Microsoft.FSharp.Core.FSharpFunc`2{MicrosoftResearch.Infer.Models.Range,Microsoft.FSharp.Core.Unit})">
+<summary>
+ Apply the function body for each element in Range r
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.Variable">
+<summary>
+ Provides methods for use with Variable objects
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.FSharp.Array2D.create2D``1(Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{``0}})">
+<summary>
+ Creates a 2-Dimensional array from a list of lists of values
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.Array2D">
+<summary>
+ Provides methods for use with 2-Dimensional .NET arrays        
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.BoolDistribution.ArrayOfArrayOfArrayOfBool">
+<summary>
+ Variable array of array of array of bool
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.BoolDistribution.ArrayOfArray2DOfBool">
+<summary>
+ Variable array of 2-Dimensional array of bool
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.BoolDistribution.Array2DOfArrayOfBool">
+<summary>
+ 2-Dimensional variable array of array of bool
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.BoolDistribution.Array2DOfBool">
+<summary>
+ 2-Dimensional variable array of bool
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.BoolDistribution.ArrayOfArrayOfBool">
+<summary>
+ Variable array of array of bool
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.BoolDistribution.ArrayOfBool">
+<summary>
+ Variable array of bool
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.BoolDistribution.VariableBernoulliArrayOfArrayOfArray">
+<summary>
+ Variable Bernoulli distribution array of array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.BoolDistribution.VariableBernoulliArrayOfArray2D">
+<summary>
+ Variable Bernoulli distribution array of 2-Dimensional array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.BoolDistribution.VariableBernoulliArray2DOfArray">
+<summary>
+ Variable 2-Dimensional Bernoulli distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.BoolDistribution.VariableBernoulliArray2D">
+<summary>
+ Variable 2-Dimensional Bernoulli distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.BoolDistribution.VariableBernoulliArrayOfArray">
+<summary>
+ Variable Bernoulli distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.BoolDistribution.VariableBernoulliArray">
+<summary>
+ Variable Bernoulli distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.BoolDistribution.BernoulliArrayOfArrayOfArray">
+<summary>
+ Bernoulli distribution array of array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.BoolDistribution.BernoulliArray2DOfArray">
+<summary>
+ 2-Dimensional Bernoulli distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.BoolDistribution.BernoulliArrayOfArray2D">
+<summary>
+ Bernoulli distribution array of 2-Dimensional array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.BoolDistribution.BernoulliArrayOfArray">
+<summary>
+ Bernoulli distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.BoolDistribution.BernoulliArray2D">
+<summary>
+ 2-Dimensional Bernoulli distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.BoolDistribution.BernoulliArray">
+<summary>
+ Bernoulli distribution array
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.BoolDistribution">
+<summary>
+ Distributions over a boolean domain    
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.ArrayOfArrayOfArrayOfInt">
+<summary>
+ Variable array of array of array of integer
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.ArrayOfArray2DOfInt">
+<summary>
+ Variable array of 2-Dimensional array of integer
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.Array2DOfArrayOfInt">
+<summary>
+ 2-Dimensional variable array of array of integer
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.Array2DOfInt">
+<summary>
+ 2-Dimensional variable array of integer
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.ArrayOfArrayOfInt">
+<summary>
+ Variable array of array of integer
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.ArrayOfInt">
+<summary>
+ Variable array of integer
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.VariablePoissonArrayOfArrayOfArray">
+<summary>
+ Variable Poisson distribution array of array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.VariablePoissonArrayOfArray2D">
+<summary>
+ Variable Poisson distribution array of 2-Dimensional array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.VariablePoissonArray2DOfArray">
+<summary>
+ Variable 2-Dimensional Poisson distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.VariablePoissonArray2D">
+<summary>
+ Variable 2-Dimensional Poisson distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.VariablePoissonArrayOfArray">
+<summary>
+ Variable Poisson distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.VariablePoissonArray">
+<summary>
+ Variable Poisson distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.PoissonArrayOfArrayOfArray">
+<summary>
+ Poisson distribution array of array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.PoissonArrayOfArray2D">
+<summary>
+Poisson distribution array of 2-Dimensional array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.PoissonArray2DOfArray">
+<summary>
+ 2-Dimensional Poisson distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.PoissonArrayOfArray">
+<summary>
+ Poisson distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.PoissonArray2D">
+<summary>
+ 2-Dimensional Poisson distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.PoissonArray">
+<summary>
+ Poisson distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.VariableDiscreteArrayOfArrayOfArray">
+<summary>
+ Variable Discrete distribution array of array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.VariableDiscreteArrayOfArray2D">
+<summary>
+ Variable Discrete distribution array of 2-Dimensional array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.VariableDiscreteArray2DOfArray">
+<summary>
+ Variable 2-Dimensional Discrete distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.VariableDiscreteArray2D">
+<summary>
+ Variable 2-Dimensional Discrete distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.VariableDiscreteArrayOfArray">
+<summary>
+ Variable Discrete distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.VariableDiscreteArray">
+<summary>
+ Variable Discrete distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.DiscreteArrayOfArrayOfArray">
+<summary>
+ Discrete distribution array of array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.DiscreteArray2DOfArray">
+<summary>
+ 2-Dimensional Discrete distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.DiscreteArrayOfArray2D">
+<summary>
+ Discrete distribution array of 2-Dimensional array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.DiscreteArrayOfArray">
+<summary>
+ Discrete distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.DiscreteArray2D">
+<summary>
+ 2-Dimensional Discrete distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution.DiscreteArray">
+<summary>
+ Discrete distribution array
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.IntDistribution">
+<summary>
+ Distributions over an integer domain     
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.ArrayOfArrayOfArrayOfDouble">
+<summary>
+ Variable array of array of array of float
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.Array2DOfArrayOfDouble">
+<summary>
+ 2-Dimensional Variable array of array of float
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.ArrayOfArray2DOfDouble">
+<summary>
+ Variable array of 2-Dimensional arrays of float
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.ArrayOfArrayOfDouble">
+<summary>
+ Variable array of array of float
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.ArrayOfDouble">
+<summary>
+ Variable array of float
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableGammaArrayOfArrayOfArray">
+<summary>
+ Variable Gamma distribution array of array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableGammaArrayOfArray2D">
+<summary>
+ Variable Gamma distribution array of 2-Dimensional array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableGammaArray2DOfArray">
+<summary>
+ Variable 2-Dimensional Gamma distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableGammaArray2D">
+<summary>
+ Variable 2-Dimensional Gamma distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableGammaArrayOfArray">
+<summary>
+ Variable Gamma distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableGammaArray">
+<summary>
+ Variable Gamma distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.GammaArrayOfArrayOfArray">
+<summary>
+ Gamma distribution array of array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.GammaArrayOfArray2D">
+<summary>
+ Gamma distribution array of 2-Dimensional array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.GammaArray2DOfArray">
+<summary>
+ 2-Dimensional Gamma distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.GammaArrayOfArray">
+<summary>
+ Gamma distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.GammaArray2D">
+<summary>
+ 2-Dimensional Gamma distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.GammaArray">
+<summary>
+ Gamma distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableBetaArrayOfArrayOfArray">
+<summary>
+ Variable Beta distribution array of array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableBetaArrayOfArray2D">
+<summary>
+ Variable Beta distribution array of 2-Dimensional array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableBetaArray2DOfArray">
+<summary>
+ Variable 2-Dimensional Beta distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableBetaArray2D">
+<summary>
+ Variable 2-Dimensional Beta distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableBetaArrayOfArray">
+<summary>
+ Variable Beta distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableBetaArray">
+<summary>
+ Variable Beta distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.BetaArrayOfArrayOfArray">
+<summary>
+ Beta distribution array of array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.BetaArrayOfArray2D">
+<summary>
+ Beta distribution array of 2-Dimensional array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.BetaArray2DOfArray">
+<summary>
+ 2-Dimensional Beta distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.BetaArrayOfArray">
+<summary>
+ Beta distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.BetaArray2D">
+<summary>
+ 2-Dimensional Beta distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.BetaArray">
+<summary>
+ Beta distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableWishartArrayOfArrayOfArray">
+<summary>
+ Variable Wishart distribution array of array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableWishartArrayOfArray2D">
+<summary>
+ Variable Wishart distribution array of 2-Dimensional array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableWishartArray2DOfArray">
+<summary>
+ Variable 2-Dimensional Wishart distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableWishartArray2D">
+<summary>
+ Variable 2-Dimensional Wishart distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableWishartArrayOfArray">
+<summary>
+ Variable Wishart distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableWishartArray">
+<summary>
+ Variable Wishart distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.WishartArrayOfArrayOfArray">
+<summary>
+ Wishart distribution array of array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.WishartArrayOfArray2D">
+<summary>
+ Wishart distribution array of 2-Dimensional array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.WishartArray2DOfArray">
+<summary>
+ 2-Dimensional Wishart distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.WishartArrayOfArray">
+<summary>
+ Wishart distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.WishartArray2D">
+<summary>
+ 2-Dimensional Wishart distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.WishartArray">
+<summary>
+ Wishart distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableDirichletArrayOfArrayOfArray">
+<summary>
+ Variable Dirichlet distribution array of array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableDirichletArrayOfArray2D">
+<summary>
+ Variable Dirichlet distribution array of 2-Dimensional array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableDirichletArray2DOfArray">
+<summary>
+ Variable 2-Dimensional Dirichlet distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableDirichletArray2D">
+<summary>
+ Variable 2-Dimensional Dirichlet distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableDirichletArrayOfArray">
+<summary>
+ Variable Dirichlet distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableDirichletArray">
+<summary>
+ Variable Dirichlet distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.DirichletArrayOfArrayOfArray">
+<summary>
+ Dirichlet distribution array of array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.DirichletArrayOfArray2D">
+<summary>
+Dirichlet distribution array of 2-Dimensional array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.DirichletArray2DOfArray">
+<summary>
+ 2-Dimensional Dirichlet distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.DirichletArrayOfArray">
+<summary>
+ Dirichlet distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.DirichletArray2D">
+<summary>
+ 2-Dimensional Dirichlet distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.DirichletArray">
+<summary>
+ Dirichlet distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableVectorGaussianArrayOfArrayOfArray">
+<summary>
+ Variable VectorGaussian distribution array of array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableVectorGaussianArrayOfArray2D">
+<summary>
+ Variable VectorGausssian distribution array of 2-Dimensional array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableVectorGaussianArray2DOfArray">
+<summary>
+ Variable 2-Dimensional VectorGaussian distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableVectorGaussianArray2D">
+<summary>
+ Variable 2-Dimensional VectorGaussian distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableVectorGaussianArrayOfArray">
+<summary>
+ Variable VectorGaussian distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableVectorGaussianArray">
+<summary>
+ Variable VectorGaussian distribution array.
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VectorGaussianArrayOfArrayOfArray">
+<summary>
+ VectorGaussian distribution array of array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VectorGaussianArrayOfArray2D">
+<summary>
+VectorGaussian distribution array of 2-Dimensional array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VectorGaussianArray2DOfArray">
+<summary>
+ 2-Dimensional VectorGaussian distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VectorGaussianArrayOfArray">
+<summary>
+ VectorGaussian distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VectorGaussianArray2D">
+<summary>
+ 2-Dimensional VectorGaussian distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VectorGaussianArray">
+<summary>
+ VectorGaussian distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableGaussianArrayOfArrayOfArray">
+<summary>
+ Variable Gaussian distribution array of array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableGaussianArrayOfArray2D">
+<summary>
+ Variable Gaussian distribution array of 2-Dimensional array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableGaussianArray2DOfArray">
+<summary>
+ Variable 2-Dimensional Gaussian distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableGaussianArray2D">
+<summary>
+ Variable 2-Dimensional Gaussian distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableGaussianArrayOfArray">
+<summary>
+ Variable Gaussian distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.VariableGaussianArray">
+<summary>
+ Variable Gaussian distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.GaussianArrayOfArrayOfArray">
+<summary>
+ Gaussian distribution array of array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.GaussianArrayOfArray2D">
+<summary>
+ Gaussian distribution array of 2-Dimensional array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.GaussianArray2DOfArray">
+<summary>
+ 2-Dimensional Gaussian distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.GaussianArrayOfArray">
+<summary>
+ Gaussian distribution array of array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.GaussianArray2D">
+<summary>
+ 2-Dimensional Gaussian distribution array
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution.GaussianArray">
+<summary>
+ Gaussian distribution array
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.FSharp.FloatDistribution">
+<summary>
+ Distributions over a float-based domain
+</summary>
+</member>
+</members>
+</doc>

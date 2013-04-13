@@ -1,0 +1,1546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>Infer.Fun</name></assembly>
+<members>
+<member name="M:MicrosoftResearch.Infer.Fun.Common.increment(Microsoft.FSharp.Core.FSharpRef{System.Int32})">
+<summary>
+ Fresh IDs
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Common.indent(System.String)">
+<summary>
+ Using spaces instead of a tab, because a tab pasted into F# confuses the offset rule
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Common">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Inference.CompoundDistribution.GetDistType">
+<summary>
+ For (Simple o) this is o.GetType(), and it distributes over the other constructors in the natural way
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Inference.CompoundVariable">
+<summary>
+ This mirrors the internal representation used by the interpreter (still in RNF-type).
+ You don&apos;t need to access this unless you want to tune per-variable inference parameters.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Inference.interpDynamic(Microsoft.FSharp.Collections.FSharpMap{System.String,MicrosoftResearch.Infer.Fun.Core.Syntax.Body},MicrosoftResearch.Infer.Fun.Core.Syntax.e)">
+<summary>
+ Returns the pre-RNF type of the expression.
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Inference.inferCompound(MicrosoftResearch.Infer.Fun.Core.Syntax.FunType,MicrosoftResearch.Infer.Fun.Core.Inference.CompoundVariable)">
+<summary>
+ Takes the pre-RNF type of the expression.
+ The resulting distribution corresponds to pre-RNF type.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Inference.setEngine(MicrosoftResearch.Infer.InferenceEngine)">
+<summary>
+ Setting inference parameters
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Inference">
+<summary>
+ Inference functions
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Interpret.value">
+<summary>
+ Values
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Interpret.interp(Microsoft.FSharp.Collections.FSharpMap{System.String,MicrosoftResearch.Infer.Fun.Core.Interpret.value},MicrosoftResearch.Infer.Fun.Core.Syntax.e)">
+<summary>
+ Expression interpreter.
+ Expects an expression in record-normal form.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Interpret.interp_uop(MicrosoftResearch.Infer.Fun.Core.Syntax.UnaryOp,MicrosoftResearch.Infer.Fun.Core.Interpret.value)">
+<summary>
+ unary operations...not too much overloading
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:MicrosoftResearch.Infer.Fun.Core.Interpret.constRanges">
+<summary>
+ For a key n contains the range [| 0 .. n - 1 |].
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:MicrosoftResearch.Infer.Fun.Core.Interpret.intType">
+<summary>
+ Misc
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Interpret">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.annotation.CloneRange">
+ <summary> Range cloning annotation, clone(e).</summary>
+ Tells us that the range expression e needs to be cloned. See Transformations.insertRanges for details.
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.annotation.Ranges">
+ <summary> Range annotations, ranges(r1, ..., rn){e}.</summary>
+ Specifies explicitly the ranges of an expression. See Transformations.insertRanges for details.
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.annotation.ValueRange">
+ <summary> Value range annotation, valueRange(n){e}.</summary>
+ In Infer.NET interpretation valueRange(n){e} is interpreted as (interpet e).SetValueRange(Range(n)).
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.annotation.Copy">
+ <summary> Expression copy.</summary>
+ In Infer.NET interpretation copy(e) is interpreted as Variable.Copy(interpet e).
+ Making copies is necessary sometimes because Infer.NET assignment (Variable.SetTo()) 
+ consumes the argument and makes it unusable, so we need to copy the argument first.
+ See Transformations.insertCopies for details.
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.annotation.Switch">
+ <summary> switch(e){e'}.</summary>
+ In Infer.NET interpretation switch(e){e'} is interpreted as Variable.Switch(interp e){interp e'},
+ thus allowing e to be used as index in e'.
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.e.Annotation">
+<summary>
+ annotate(a){e}
+ In Fun semantics annotate(a){e} is the same as e, but annotations are used to drive Infer.NET correctly. 
+ Annotations are inserted by program transformations, you should not need to use them.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.e.Map">
+<summary>
+ [|for v in e1 -&gt; e2|]
+ The iterator name can be arbitrary
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.e.Iter">
+<summary>
+ for v in e1 do e2
+ The iterator name can be arbitrary
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.e.P">
+<summary>
+ Projections: a.[i] or a.fieldName.
+ Nested projections are allowed.
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.e.RangeOf">
+<summary>
+ RangeOf array = [| 0 .. array.Length - 1 |].
+ In F# code use range(array).
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.e.Range">
+<summary>
+ Range e = [| 0 .. e - 1 |].
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.e.A">
+<summary>
+ Arrays.
+ Contains the element type for the case the array is empty.
+ An array element must be either an array (A ...) or an expression of non-array type.
+ Arrays of comprehensions are not allowed.
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.e.R">
+<summary>
+ Records.
+ Tuples are represented as records 
+ with fields Item1, Item2, ...
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.e.C">
+<summary>
+ Constants
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.e.V">
+<summary>
+ Variables.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.selector">
+<summary>
+ Projection/dereference
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.constant.O">
+<summary>
+ An opaque object (say, Vector, PositiveDefiniteMatrix).
+ The reason we require a type annotation is that
+ o.GetType() returns the runtime type which due
+ to inheritance may be more specific than the declared type 
+ (DenseVector vs Vector). This leads to problems in the 
+ interpreter because T :&gt; T&apos; does not imply Variable&lt;T&gt; :&gt; Variable&lt;T&apos;&gt;.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.CallInfo.External">
+<summary>
+ Call an external function that has an associated factor. 
+ See Lib.fsi for supported external functions and ways to add arbitrary new ones.
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.CallInfo.Internal">
+<summary>
+ Call a Fun function. 
+ Function names are bound to bodies in Context (see below).
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.DistName">
+<summary>
+ distribution names
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.UnaryOp">
+<summary>
+ Operations
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.v">
+<summary>
+ Includes type if known.
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.vname">
+<summary>
+ Variables.
+ For non-local variables the name includes the module name.
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.FunType.TArray">
+<summary>
+ records and tuples 
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax.FunType">
+<summary>
+ Expressions
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Syntax.proj(System.Int32)">
+<summary>
+ Helpers
+ Tuple field names
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Syntax.descend(Microsoft.FSharp.Core.FSharpFunc`2{MicrosoftResearch.Infer.Fun.Core.Syntax.e,MicrosoftResearch.Infer.Fun.Core.Syntax.e},MicrosoftResearch.Infer.Fun.Core.Syntax.e)">
+<summary>
+ Apply a function to all children
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Syntax.children(MicrosoftResearch.Infer.Fun.Core.Syntax.e)">
+<summary>
+ Traversal
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Syntax.getType(MicrosoftResearch.Infer.Fun.Core.Syntax.e)">
+<summary>
+ Call inferTypes first.
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Syntax.inferTypes(MicrosoftResearch.Infer.Fun.Core.Syntax.e)">
+<summary>
+ Fills in missing variable types.
+ Assumes a closed expression where all internal calls have been inlined. 
+ See Transformations.inlineContext.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Syntax.systemTypeToFunType(System.Type)">
+<summary>
+ Typing
+ Type conversion
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Syntax">
+
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Transformations.insertRanges(MicrosoftResearch.Infer.Fun.Core.Syntax.e)">
+ <summary>
+   Make all ranges explicit. Insert range definitions and range annotations.
+ </summary>
+
+ <example>
+    let docs = [[0; 1; 2; 3]; [4; 5; 6; 7]; [0; 4; 3; 8; 9]] in
+    let theta0 =
+           [for index in [0 .. (docs).Length - 1] -> random(DirichletSymmetric(2, 0.500000))] in
+    let phi0 =
+           [for i in [0 .. 1] -> random(DirichletSymmetric(10, 0.100000))] in
+    let DiscreteSample =
+        [for d in [0 .. (docs).Length - 1] ->
+            let var = theta0.[d] in
+            [for w in [0 .. (valueRange(10){docs.[d]}).Length - 1] -> random(Discrete(var))]] in
+    {Item1=
+    observe (docs =
+    [for d0 in [0 .. (docs).Length - 1] ->
+        let var0 = DiscreteSample.[d0] in
+        [for w0 in [0 .. (valueRange(10){docs.[d0]}).Length - 1] -> switch(var0.[w0]){random(Discrete(phi0.[var0.[w0]]))}]]);
+    theta0; Item2=phi0}
+
+  becomes
+
+    let _range1 = [0 .. 2] in
+    let _range2 = [0 .. ranges(_range1){[4; 4; 5]}.[_range1] - 1] in
+    let _range7 = [0 .. 1] in
+    let docs = ranges(_range1,_range2){[ranges(_range3){[0; 1; 2; 3]}; ranges(_range4){[4; 5; 6; 7]}; ranges(_range5){[0; 4; 3; 8; 9]}]} in
+    let theta0 = ranges(_range1){
+        [for index in [0 .. (docs).Length - 1] -> random(DirichletSymmetric(2, 0.500000))]} in
+    let phi0 = ranges(_range7){
+        [for i in [0 .. 1] -> random(DirichletSymmetric(10, 0.100000))]} in
+    let DiscreteSample = ranges(_range1,_range2){
+        [for d in [0 .. (docs).Length - 1] ->
+            let var = theta0.[d] in ranges(_range2){
+            [for w in [0 .. (valueRange(10){docs.[d]}).Length - 1] -> random(Discrete(var))]}]} in
+    {Item1=
+    observe (docs = ranges(_range1,_range2){
+    [for d0 in [0 .. (docs).Length - 1] ->
+        let var0 = DiscreteSample.[d0] in ranges(_range2){
+        [for w0 in [0 .. (valueRange(10){docs.[d0]}).Length - 1] -> switch(var0.[w0]){random(Discrete(phi0.[var0.[w0]]))}]}]});
+    theta0; Item2=phi0}
+  </example>
+   
+  Note that the definition for _range2 is not a valid Fun expression. Instead it mimics the Infer.NET form for constructing ranges.
+ 
+  Transformations to be applied by the caller before:
+  - RNF
+   
+  Is equivalent.
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Transformations.insertValueRanges(MicrosoftResearch.Infer.Fun.Core.Syntax.e)">
+ <summary>
+  Insert value range annotations where possible. 
+ </summary>
+
+ <example>
+    [for i in [0..2] -> if skill.[i] > 25.0 then 1 else 0]
+  becomes
+    valueRange(2){[for i in [0..2] -> valueRange(2){if skills.[i] > 25.0 then 1 else 0}]}
+ </example>
+ 
+    Transformations to be applied by the caller before:
+    - RNF
+   
+  Is equivalent.
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Transformations.insertCopies(MicrosoftResearch.Infer.Fun.Core.Syntax.e)">
+ <summary>
+  Insert copies where appropriate. 
+ </summary>
+
+    Details:
+
+    - Each [| for i in R -> v |] with a variable v gets replaced by [| for i in R -> copy(v) |] .
+      NB: this should not be necessary in newest Infer.NET (bugfix 20.04.2012).
+      24.04.2012: it is still necessary when v is an array variable. Waiting for general fix.
+
+      10.05.2012: FIXME: it also seems to be necessary for [| for i in R -> v.[i] |], or even when v.[i] is deeper inside the body.
+
+    - Each (if e then e1; ...; en; v else e1'; ...; em'; v') gets replaced by (if e then e1; ...; en; copy(v) else e1'; ...; em'; copy(v')).
+      As a refinement, this should only be necessary if ei or ej' contain observations.
+      (assignment in Infer.NET discards observations of the argument).
+
+    Is equivalent.
+</member>
+<member name="">
+
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Transformations.trimComprehensions(MicrosoftResearch.Infer.Fun.Core.Syntax.e)">
+ <summary>
+  Pull deterministic expressions not depending on an index out of comprehensions. 
+ </summary>
+
+ <example>
+  From MixtureOfGaussians:
+    [for i in [0..2] -> random(VectorGaussianFromMeanAndPrecision(VectorFromArray [0.0; 0.0], IdentityScaledBy 2 0.01))]
+  becomes
+    let v1 = VectorFromArray [0.0; 0.0] in
+    let v2 = IdentityScaledBy 2 0.01 in
+    [for i in [0..2] -> random(VectorGaussianFromMeanAndPrecision(v1, v2))]
+ </example>
+ 
+  The reason we need this transformation is Infer.NET-specific. MixtureOfGaussians fails otherwise.
+  It only fails when we start indexing the generated array by a switched variable. 
+  I don't quite understand the problem, more discussion needed.
+
+  Transformations to be applied by the caller before:
+  - RNF
+   
+  Is equivalent.
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Transformations.isConstant(MicrosoftResearch.Infer.Fun.Core.Syntax.e)">
+<summary>
+ True for constant literals and constant arrays. Not true for 1 + 1.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Transformations.recordNormalForm(MicrosoftResearch.Infer.Fun.Core.Syntax.e)">
+    <summary>
+    Convert to record-normal form (RNF).
+    </summary>
+
+    An expression in RNF is
+        let v1 = e1 in ...
+        let vn = en in
+        e
+    where 
+        - e, e1, ..., en do not contain lets or field selectors
+        - e1, ..., en do not contain records
+        - e does not contain random sampling and is in record-first form, that is,
+          either it does not contain records or it is of the form {name1 = e1', ..., nameN = en'},
+          where e1', ..., en' are in record-first form.
+
+    An auxiliary property (of no importance to the interpreter, but may be useful in the proof)
+        - each ei has zero or more array comperehension at the top, containing zero or one random sampling, containing an expression
+          without arrays or random sampling. Written as a grammar, ei ::= eArray, where
+              eArray ::= eRandom | [for i in eDet -> eArray] 
+              eRandom ::= eSimple | random(eSimple)
+              eSimple ::= e without [...] or random(...)
+              eDet ::= e without random(...)
+
+
+    By converting to record-normal form the type of the expression changes. Therefore after inference we need to reconstruct
+    the result. This is done by the function Core.Inference.fromRecordNormalForm such that
+        fromRecordNormalForm (getType e) ("infer" (recordNormalForm e)) = "infer" e
+    Here "infer" is a hypothetical function that applies to arbitrary expressions 
+    (our implemented inference function expects expressions in RNF).
+
+    <example>
+        [for a1, a2 in zip A1 A2 -> 
+            let x = random (...) in
+            (a1 + x, a2 + x)]
+    becomes
+        let x = [for i in range(A1) -> random(...)] in
+        let res1 = [for i in range(A1) -> A1.[i] + x.[i]] in
+        let res2 = [for i in range(A1) -> A2.[i] + x.[i]] in
+        (res1, res2)
+    </example>
+
+    Transformations to be applied by the caller before RNF:
+    - inlineContext
+    - typecheck
+    - makeVarsDistinct
+    - rangeNormalForm
+
+    Checks and transformations performed automatically by RNF:
+    - hasDeterministicRanges
+    - removeTrivialLets
+
+    Assumptions:
+    - All external functions don't have records anywhere in their types.
+
+    Is NOT equivalent (see above regarding return type).
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Transformations.rangeNormalForm(MicrosoftResearch.Infer.Fun.Core.Syntax.e)">
+    <summary>
+    Convert to range-normal form where in every expression 
+      [for xi in e -> e'] or (for xi in e do e')
+    e is either a ConstRange expression or a RangeOf expression
+    and there are no other ConstRange and RangeOf expressions.
+    </summary>
+
+    Is equivalent.
+</member>
+<member name="">
+
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Transformations.removeTrivialLets(MicrosoftResearch.Infer.Fun.Core.Syntax.e)">
+    <summary>
+     Transform each subexpression (let x = e in e') to (subst x e e') if 
+       e is a variable 
+     OR
+       x occurs at most once in e', 
+       e is deterministic or x does not occur under a comprehension in e',
+       and e does not contain observations or inference.
+    </summary>
+
+    Transformations to be applied by the caller before removing trivial lets:
+    - inlineContext
+    - mkVarsDistinct
+
+    Is equivalent.
+</member>
+<member name="">
+
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Transformations.makeVariablesDistinct(MicrosoftResearch.Infer.Fun.Core.Syntax.e)">
+<summary>
+ Give all variables distinct names.
+ Is equivalent.
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Transformations.inlineContext(Microsoft.FSharp.Collections.FSharpMap{System.String,MicrosoftResearch.Infer.Fun.Core.Syntax.Body},MicrosoftResearch.Infer.Fun.Core.Syntax.e)">
+<summary>
+ Inline internal calls and free variables from the context.
+ Is equivalent.
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Core.Transformations.subst(Microsoft.FSharp.Collections.FSharpList{System.Tuple`2{System.String,Microsoft.FSharp.Core.FSharpOption{MicrosoftResearch.Infer.Fun.Core.Syntax.FunType}}},Microsoft.FSharp.Collections.FSharpList{MicrosoftResearch.Infer.Fun.Core.Syntax.e},MicrosoftResearch.Infer.Fun.Core.Syntax.e)">
+<summary>
+ (subst vs es e) substitutes each free vs.[i] by es.[i] in e.
+ Not recursive: will not substitute inside es.[i].
+ Is not equivalent.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Core.Transformations">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Inference.interpDynamic``2(Microsoft.FSharp.Quotations.FSharpExpr{Microsoft.FSharp.Core.FSharpFunc`2{``0,``1}},``0)">
+<summary>
+ Returns the pre-RNF type of the expression.
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Inference.inferCompound(MicrosoftResearch.Infer.Fun.Core.Syntax.FunType,MicrosoftResearch.Infer.Fun.Core.Inference.CompoundVariable)">
+<summary>
+ Inference
+ Takes the pre-RNF type of the expression.
+ The resulting distribution corresponds to pre-RNF type.
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Inference.getAssemblyContext">
+<summary>
+ returns compiled versions of all reflected definitions in the currently loaded assembly
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Inference.getCoreSyntax(Microsoft.FSharp.Quotations.FSharpExpr)">
+<summary>
+ Get the syntax tree by introspection of F# code
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.FSharp.Inference">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Syntax.sampleMany``2(Microsoft.FSharp.Core.FSharpFunc`2{``0,``1},System.Int32,``0)">
+<summary>
+ Given a Fun function, sample from it n times, and return the list of successful outcomes 
+ (outcomes in which no observation fails).
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Syntax.sample``2(Microsoft.FSharp.Core.FSharpFunc`2{``0,``1},``0)">
+<summary>
+ Given a Fun function, sample from it, and return None if an observation fails.
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Syntax.range``1(``0[])">
+<summary>
+ Array range
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Syntax.observe(System.Boolean)">
+ <summary> Observation. </summary>
+ Calling observe in F# directly has no effect. If you would like to sample from a Fun function
+ while respecting observations, use the <see cref="sample"/> function.
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Syntax.random``1(MicrosoftResearch.Infer.Fun.FSharp.Syntax.Distribution{``0})">
+<summary>
+ Sampling
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Syntax.VectorGaussianFromMeanAndVariance(MicrosoftResearch.Infer.Maths.Vector,MicrosoftResearch.Infer.Maths.PositiveDefiniteMatrix)">
+<summary>
+ variance and covariance
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Syntax.DirichletUniform(System.Int32)">
+<summary>
+ uniform Dirichlet of dimension n
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Syntax.DirichletSymmetric(System.Int32,System.Double)">
+<summary>
+ symmetric Dirichlet
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Syntax.Dirichlet(System.Double[])">
+<summary>
+ pseudo-counts
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Syntax.Bernoulli(System.Double)">
+<summary>
+ p(true)
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Syntax.Poisson(System.Double)">
+<summary>
+ mean
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Syntax.Binomial(System.Int32,System.Double)">
+<summary>
+ subprocess and trial count
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Syntax.DiscreteUniform(System.Int32)">
+<summary>
+ discrete uniform on 0..n-1; p(i) = 1/n
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Syntax.Discrete(MicrosoftResearch.Infer.Maths.Vector)">
+<summary>
+ p(i) = v_i
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Syntax.Beta(System.Double,System.Double)">
+<summary>
+ true and false count
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Syntax.Reflection.unquoteData(System.Object)">
+<summary>
+ turn a run-time value into a constant expression
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Syntax.Reflection.unquoteBody(Microsoft.FSharp.Quotations.FSharpExpr)">
+<summary>
+ unquote a lambda expression
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.FSharp.Syntax.Reflection.systemTypeToFunType(System.Type)">
+<summary>
+ Type conversion
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.FSharp.Syntax.Reflection">
+<summary>
+ Converting F# to Fun expressions
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.FSharp.Syntax">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.GenericWrappers">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Lib.registerFactor(Microsoft.FSharp.Quotations.FSharpExpr,Microsoft.FSharp.Quotations.FSharpExpr)">
+<summary>
+ Interface for adding new functions
+ Register support for new functions
+ 
+ Call like registerFactor &lt;@ f @&gt; &lt;@ factor @&gt;,
+ where f is the function you would like to use in your Fun code.
+ If f is of type f: (&apos;a -&gt; &apos;b) then the factor must be of type 
+ factor: (tau(&apos;a) -&gt; tau(&apos;b)), where 
+ tau(&apos;a[]) = VariableArray&lt;tau(&apos;a)&gt;,
+ tau(&apos;a)   = Variable(&apos;a) when &apos;a is a simple type.
+ See AddFun example for an illustration.
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Lib.callInfoForFun(Microsoft.FSharp.Quotations.FSharpExpr)">
+<summary>
+ CallInfo for supported functions
+ Example: callInfoForFun &lt;@ InnerProduct @&gt;
+ throws an exception if the function is not supported
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Lib.Exp(System.Double)">
+<summary>
+ Exponentiation
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Lib.Subarray``1(``0[],System.Int32[])">
+<summary>
+ Create a T[] random variable array by extracting elements of array at the specified indices, which cannot include duplicates. 
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Lib.GetItems``1(``0[],System.Int32[])">
+<summary>
+ Gets an array containing (possibly duplicated) items of a source array 
+</summary>
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Lib.VectorFromArray(System.Double[])">
+<summary>
+ Create a Vector corresponding to the supplied array of floats
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MicrosoftResearch.Infer.Fun.Lib.DiagonalMatrix(System.Double[])">
+<summary>
+ Functions supported in Fun
+</summary>
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Lib">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MicrosoftResearch.Infer.Fun.Quotations">
+
+</member>
+</members>
+</doc>

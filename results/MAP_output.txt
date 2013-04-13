@@ -1,0 +1,11 @@
+Current log-probability : 72.792835
+Current log-probability : 196.982196
+Current log-probability : 279.066770
+Current log-probability : 323.140381
+Current log-probability : 331.872998
+Current log-probability : 331.873529
+Optimization terminated successfully.
+         Current function value: -331.873529
+         Iterations: 6
+         Function evaluations: 1392419
+
