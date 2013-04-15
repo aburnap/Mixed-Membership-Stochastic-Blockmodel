@@ -2,9 +2,9 @@ import pymc
 import numpy as np
 
 
-data_matrix=np.loadtxt("../data/Y_alpha0.1_K5_N20.txt",delimiter=',')
+data_matrix=np.loadtxt("../data/Y_alpha0.1_K2_N20.txt",delimiter=',')
 num_people = 20
-num_groups = 5
+num_groups = 2
 alpha = np.ones(num_groups).ravel()*0.1
 B = np.eye(num_groups)*0.85
 B = B + np.random.random(size=[num_groups,num_groups])*0.1
