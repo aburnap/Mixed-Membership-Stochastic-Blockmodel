@@ -1,0 +1,956 @@
+makebarplot(adopted~rinflpcc)
+makebarplot(adopted~rinflcsum)
+makebarplot(adopted~rinflpsum)
+makebarplot(adopted~inflnorm)
+makebarplot(adopted~cpop)
+makebarplot(adopted~rinflcsum)
+makebarplot(adopted~rinflccc)
+makebarplot(adopted~rinflpsum)
+makebarplot(adopted~wdgc)
+makebarplot(adopted~rinflccc)
+makebarplot(adopted~rinflpcc)
+makebarplot(adopted~inflnorm)
+makebarplot(adopted~cpop)
+par(mfrow = c(2, 3))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(3, 3, 3, 0), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm)#
+makebarplot(adopted~cpop)#
+makebarplot(adopted~rinflccc)#
+makebarplot(adopted~rinflpcc)#
+makebarplot(adopted~rinflcsum)#
+makebarplot(adopted~rinflpsum)
+dat2[1:10, rinflcsum]
+dat2$rinflcsum[1:10]
+dat2$rinflpsum[1:10]
+cor(dat2$rinflcsum, dat2$rinflpsum)
+makebarplot <- function(f) {#
+m1 <- glm(f, data=d1, family="binomial")#
+m2 <- glm(f, data=d2, family="binomial")#
+m3 <- glm(f, data=d3, family="binomial")#
+m4 <- glm(f, data=d4, family="binomial")#
+m5 <- glm(f, data=d5, family="binomial")#
+C1<-coef(m1)#
+C2<-coef(m2)#
+C3<-coef(m3)#
+C4<-coef(m4)#
+C5<-coef(m5)#
+ci1<-confint.default(m1, level=0.9)#
+ci2<-confint.default(m2, level=0.9)#
+ci3<-confint.default(m3, level=0.9)#
+ci4<-confint.default(m4, level=0.9)#
+ci5<-confint.default(m5, level=0.9)#
+coefmat <- rbind(C1,C2,C3,C4,C5)[,2:length(coef(m1))]#
+cilmat <- rbind(ci1[,1],ci2[,1],ci3[,1],ci4[,1],ci5[,1])[,2:length(coef(m1))]#
+ciumat <- rbind(ci1[,2],ci2[,2],ci3[,2],ci4[,2],ci5[,2])[,2:length(coef(m1))]#
+#
+library(RColorBrewer)#
+#mycolor = c("lightblue", "mistyrose", "lightcyan", "lavender", "cornsilk")library(RColorBrewer)#
+mycolor<-brewer.pal(5,"Accent")#
+leg=c("Innovator", "Early adopter", "Early majority", "Late majority", "Laggard")#
+#
+#postscript("fig-aei.eps")#
+library(gplots)#
+barplot2(coefmat, beside=TRUE, col=mycolor, ci.u=ciumat, ci.l=cilmat,plot.grid=FALSE, axes=TRUE, plot.ci=TRUE)#
+#dev.off()	#
+}#
+#
+par(mfrow = c(2, 3))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(3, 3, 3, 0), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm)#
+makebarplot(adopted~cpop)#
+makebarplot(adopted~rinflccc)#
+makebarplot(adopted~rinflpcc)#
+makebarplot(adopted~rinflcsum)#
+makebarplot(adopted~rinflpsum)
+makebarplot <- function(f) {#
+m1 <- glm(f, data=d1, family="binomial")#
+m2 <- glm(f, data=d2, family="binomial")#
+m3 <- glm(f, data=d3, family="binomial")#
+m4 <- glm(f, data=d4, family="binomial")#
+m5 <- glm(f, data=d5, family="binomial")#
+C1<-coef(m1)#
+C2<-coef(m2)#
+C3<-coef(m3)#
+C4<-coef(m4)#
+C5<-coef(m5)#
+ci1<-confint.default(m1, level=0.9)#
+ci2<-confint.default(m2, level=0.9)#
+ci3<-confint.default(m3, level=0.9)#
+ci4<-confint.default(m4, level=0.9)#
+ci5<-confint.default(m5, level=0.9)#
+coefmat <- rbind(C1,C2,C3,C4,C5)[,2:length(coef(m1))]#
+cilmat <- rbind(ci1[,1],ci2[,1],ci3[,1],ci4[,1],ci5[,1])[,2:length(coef(m1))]#
+ciumat <- rbind(ci1[,2],ci2[,2],ci3[,2],ci4[,2],ci5[,2])[,2:length(coef(m1))]#
+#
+library(RColorBrewer)#
+#mycolor = c("lightblue", "mistyrose", "lightcyan", "lavender", "cornsilk")library(RColorBrewer)#
+#mycolor<-brewer.pal(5,"Accent")#
+mycolor<-"white"#
+leg=c("Innovator", "Early adopter", "Early majority", "Late majority", "Laggard")#
+#postscript("fig-aei.eps")#
+library(gplots)#
+barplot2(coefmat, beside=TRUE, col=mycolor, ci.u=ciumat, ci.l=cilmat,plot.grid=FALSE, axes=TRUE, plot.ci=TRUE)#
+#dev.off()	#
+}#
+#
+par(mfrow = c(2, 3))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(3, 3, 3, 0), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm)#
+makebarplot(adopted~cpop)#
+makebarplot(adopted~rinflccc)#
+makebarplot(adopted~rinflpcc)#
+makebarplot(adopted~rinflcsum)#
+makebarplot(adopted~rinflpsum)
+par(mfrow = c(2, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(3, 3, 3, 0), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm)#
+#makebarplot(adopted~cpop)#
+makebarplot(adopted~rinflccc)#
+makebarplot(adopted~rinflpcc)#
+makebarplot(adopted~rinflcsum)#
+#makebarplot(adopted~rinflpsum)
+makebarplot <- function(f) {#
+m1 <- glm(f, data=d1, family="binomial")#
+m2 <- glm(f, data=d2, family="binomial")#
+m3 <- glm(f, data=d3, family="binomial")#
+m4 <- glm(f, data=d4, family="binomial")#
+m5 <- glm(f, data=d5, family="binomial")#
+C1<-coef(m1)#
+C2<-coef(m2)#
+C3<-coef(m3)#
+C4<-coef(m4)#
+C5<-coef(m5)#
+ci1<-confint.default(m1, level=0.9)#
+ci2<-confint.default(m2, level=0.9)#
+ci3<-confint.default(m3, level=0.9)#
+ci4<-confint.default(m4, level=0.9)#
+ci5<-confint.default(m5, level=0.9)#
+coefmat <- rbind(C1,C2,C3,C4,C5)[,2:length(coef(m1))]#
+cilmat <- rbind(ci1[,1],ci2[,1],ci3[,1],ci4[,1],ci5[,1])[,2:length(coef(m1))]#
+ciumat <- rbind(ci1[,2],ci2[,2],ci3[,2],ci4[,2],ci5[,2])[,2:length(coef(m1))]#
+#
+library(RColorBrewer)#
+#mycolor = c("lightblue", "mistyrose", "lightcyan", "lavender", "cornsilk")library(RColorBrewer)#
+#mycolor<-brewer.pal(5,"Accent")#
+mycolor<-"Pastel1"#
+leg=c("Innovator", "Early adopter", "Early majority", "Late majority", "Laggard")#
+#postscript("fig-aei.eps")#
+library(gplots)#
+barplot2(coefmat, beside=TRUE, col=mycolor, ci.u=ciumat, ci.l=cilmat,plot.grid=FALSE, axes=TRUE, plot.ci=TRUE)#
+#dev.off()	#
+}
+par(mfrow = c(2, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(3, 3, 3, 0), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm)#
+#makebarplot(adopted~cpop) # follow same trend as inflnorm#
+makebarplot(adopted~rinflccc)#
+makebarplot(adopted~rinflpcc)#
+makebarplot(adopted~rinflcsum)#
+#makebarplot(adopted~rinflpsum) # follow same trend as rinflcsum
+makebarplot <- function(f) {#
+m1 <- glm(f, data=d1, family="binomial")#
+m2 <- glm(f, data=d2, family="binomial")#
+m3 <- glm(f, data=d3, family="binomial")#
+m4 <- glm(f, data=d4, family="binomial")#
+m5 <- glm(f, data=d5, family="binomial")#
+C1<-coef(m1)#
+C2<-coef(m2)#
+C3<-coef(m3)#
+C4<-coef(m4)#
+C5<-coef(m5)#
+ci1<-confint.default(m1, level=0.9)#
+ci2<-confint.default(m2, level=0.9)#
+ci3<-confint.default(m3, level=0.9)#
+ci4<-confint.default(m4, level=0.9)#
+ci5<-confint.default(m5, level=0.9)#
+coefmat <- rbind(C1,C2,C3,C4,C5)[,2:length(coef(m1))]#
+cilmat <- rbind(ci1[,1],ci2[,1],ci3[,1],ci4[,1],ci5[,1])[,2:length(coef(m1))]#
+ciumat <- rbind(ci1[,2],ci2[,2],ci3[,2],ci4[,2],ci5[,2])[,2:length(coef(m1))]#
+#
+library(RColorBrewer)#
+#mycolor = c("lightblue", "mistyrose", "lightcyan", "lavender", "cornsilk")library(RColorBrewer)#
+mycolor<-brewer.pal(5,"Pastel1")#
+leg=c("Innovator", "Early adopter", "Early majority", "Late majority", "Laggard")#
+#postscript("fig-aei.eps")#
+library(gplots)#
+barplot2(coefmat, beside=TRUE, col=mycolor, ci.u=ciumat, ci.l=cilmat,plot.grid=FALSE, axes=TRUE, plot.ci=TRUE)#
+#dev.off()	#
+}
+par(mfrow = c(2, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(3, 3, 3, 0), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm)#
+#makebarplot(adopted~cpop) # follow same trend as inflnorm#
+makebarplot(adopted~rinflccc)#
+makebarplot(adopted~rinflpcc)#
+makebarplot(adopted~rinflcsum)#
+#makebarplot(adopted~rinflpsum) # follow same trend as rinflcsum
+par(mar = c(0, 0, 0, 0), oma = c(1, 1, 1, 1))
+par(mfrow = c(2, 2))
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)
+par(mar = c(0, 0, 0, 0), oma = c(1, 1, 1, 1))
+makebarplot(adopted~rinflccc)
+par(mfrow = c(2, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(2, 2, 2, 0), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm)#
+#makebarplot(adopted~cpop) # follow same trend as inflnorm#
+makebarplot(adopted~rinflccc)#
+makebarplot(adopted~rinflpcc)#
+makebarplot(adopted~rinflcsum)#
+#makebarplot(adopted~rinflpsum) # follow same trend as rinflcsum
+par(mfrow = c(2, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(2.3, 2.3, 2.3, 0), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm)#
+#makebarplot(adopted~cpop) # follow same trend as inflnorm#
+makebarplot(adopted~rinflccc)#
+makebarplot(adopted~rinflpcc)#
+makebarplot(adopted~rinflcsum)#
+#makebarplot(adopted~rinflpsum) # follow same trend as rinflcsum
+par(mfrow = c(2, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(2.3, 2.3, 2.3, 0), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm, "social influence")#
+#makebarplot(adopted~cpop) # follow same trend as inflnorm#
+makebarplot(adopted~rinflccc, "competitor influence (average)\n")#
+makebarplot(adopted~rinflpcc, "collaborator influence (average)\n")#
+makebarplot(adopted~rinflcsum, "competitor influence (sum)")#
+#makebarplot(adopted~rinflpsum) # follow same trend as rinflcsum
+makebarplot <- function(f, maintitle) {#
+m1 <- glm(f, data=d1, family="binomial")#
+m2 <- glm(f, data=d2, family="binomial")#
+m3 <- glm(f, data=d3, family="binomial")#
+m4 <- glm(f, data=d4, family="binomial")#
+m5 <- glm(f, data=d5, family="binomial")#
+C1<-coef(m1)#
+C2<-coef(m2)#
+C3<-coef(m3)#
+C4<-coef(m4)#
+C5<-coef(m5)#
+ci1<-confint.default(m1, level=0.9)#
+ci2<-confint.default(m2, level=0.9)#
+ci3<-confint.default(m3, level=0.9)#
+ci4<-confint.default(m4, level=0.9)#
+ci5<-confint.default(m5, level=0.9)#
+coefmat <- rbind(C1,C2,C3,C4,C5)[,2:length(coef(m1))]#
+cilmat <- rbind(ci1[,1],ci2[,1],ci3[,1],ci4[,1],ci5[,1])[,2:length(coef(m1))]#
+ciumat <- rbind(ci1[,2],ci2[,2],ci3[,2],ci4[,2],ci5[,2])[,2:length(coef(m1))]#
+#
+library(RColorBrewer)#
+#mycolor = c("lightblue", "mistyrose", "lightcyan", "lavender", "cornsilk")library(RColorBrewer)#
+mycolor<-brewer.pal(5,"Pastel1")#
+leg=c("Innovator", "Early adopter", "Early majority", "Late majority", "Laggard")#
+#postscript("fig-aei.eps")#
+library(gplots)#
+barplot2(coefmat, beside=TRUE, col=mycolor, ci.u=ciumat, ci.l=cilmat,plot.grid=FALSE, axes=TRUE, plot.ci=TRUE, main=maintitle)#
+#dev.off()	#
+}
+par(mfrow = c(2, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(2.3, 2.3, 2.3, 0), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm, "social influence")#
+#makebarplot(adopted~cpop) # follow same trend as inflnorm#
+makebarplot(adopted~rinflccc, "competitor influence (average)\n")#
+makebarplot(adopted~rinflpcc, "collaborator influence (average)\n")#
+makebarplot(adopted~rinflcsum, "competitor influence (sum)")#
+#makebarplot(adopted~rinflpsum) # follow same trend as rinflcsum
+par(mfrow = c(2, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(3, 2.3, 2.3, 0), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm, "social influence")#
+#makebarplot(adopted~cpop) # follow same trend as inflnorm#
+makebarplot(adopted~rinflccc, "competitor influence \n(average)")#
+makebarplot(adopted~rinflpcc, "collaborator influence\n (average)")#
+makebarplot(adopted~rinflcsum, "competitor influence\n (sum)")#
+#makebarplot(adopted~rinflpsum) # follow same trend as rinflcsum
+par(mfrow = c(2, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(3, 3, 2.3, 0), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm, "social influence")#
+#makebarplot(adopted~cpop) # follow same trend as inflnorm#
+makebarplot(adopted~rinflccc, "competitor influence \n(average)")#
+makebarplot(adopted~rinflpcc, "collaborator influence\n (average)")#
+makebarplot(adopted~rinflcsum, "competitor influence\n (sum)")#
+#makebarplot(adopted~rinflpsum) # follow same trend as rinflcsum
+par(mfrow = c(2, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(3, 3.5, 3, 0), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm, "social influence")#
+#makebarplot(adopted~cpop) # follow same trend as inflnorm#
+makebarplot(adopted~rinflccc, "competitor influence \n(average)")#
+makebarplot(adopted~rinflpcc, "collaborator influence\n (average)")#
+makebarplot(adopted~rinflcsum, "competitor influence\n (sum)")#
+#makebarplot(adopted~rinflpsum) # follow same trend as rinflcsum
+par(mfrow = c(2, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(2.3, 3.5, 3, 0), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm, "social influence")#
+#makebarplot(adopted~cpop) # follow same trend as inflnorm#
+makebarplot(adopted~rinflccc, "competitor influence \n(average)")#
+makebarplot(adopted~rinflpcc, "collaborator influence\n (average)")#
+makebarplot(adopted~rinflcsum, "competitor influence\n (sum)")#
+#makebarplot(adopted~rinflpsum) # follow same trend as rinflcsum
+par(mfrow = c(2, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(2.3, 3.5, 3, 3), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm, "social influence")#
+#makebarplot(adopted~cpop) # follow same trend as inflnorm#
+makebarplot(adopted~rinflccc, "competitor influence \n(average)")#
+makebarplot(adopted~rinflpcc, "collaborator influence\n (average)")#
+makebarplot(adopted~rinflcsum, "competitor influence\n (sum)")#
+#makebarplot(adopted~rinflpsum) # follow same trend as rinflcsum
+par(mfrow = c(2, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(2.3, 3.5, 3, 2.3), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm, "social influence")#
+#makebarplot(adopted~cpop) # follow same trend as inflnorm#
+makebarplot(adopted~rinflccc, "competitor influence \n(average)")#
+makebarplot(adopted~rinflpcc, "collaborator influence\n (average)")#
+makebarplot(adopted~rinflcsum, "competitor influence\n (sum)")#
+#makebarplot(adopted~rinflpsum) # follow same trend as rinflcsum
+par(mfrow = c(2, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(2.3, 3.5, 3, 2.3), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm, "social influence")#
+#makebarplot(adopted~cpop) # follow same trend as inflnorm#
+makebarplot(adopted~rinflccc, "competitor influence \n(average)")#
+makebarplot(adopted~rinflcsum, "competitor influence\n (sum)")#
+#makebarplot(adopted~rinflpsum) # follow same trend as rinflcsum#
+makebarplot(adopted~rinflpcc, "collaborator influence\n (average)")
+ls()
+table(dat2$uid)
+length(table(dat2$uid))
+useraei <- read.table("aei-1995.txt")
+dim(useraei)
+names(useraei)
+useraei <- as.vector(useraei)
+shapiro.test(useraei)
+shapiro.test(useraei[,1])
+useraei <- read.table("aei-1995.txt")
+useraei <- read.table("aei-1995.txt", colnames=c("aei"))
+useraei <- read.table("aei-1995.txt", col.names=c("aei"))
+useraeisample <- useraei[sample(nrow(useraei), 5000),]
+shapiro.test(useraeisample)
+qqnorm(useraeisample)
+qqline(useraeisample, col=1)
+qqnorm(useraeisample, main="")
+qqline(useraeisample, col=1)
+summary(useraei)
+useraei <- useraei[useraei$aei<1,]
+shapiro.test(useraeisample)
+qqnorm(useraeisample)
+summary(useraei)
+mean(useraei)
+sd(ueraei)
+sd(useraei)
+mu=mean(useraei)
+s=sd(useraei)
+mu-2*s
+useraei <- read.table("aei-1995.txt", col.names=c("aei"))#
+useraeisample <- useraei[sample(nrow(useraei), 5000),]#
+useraei <- useraei[useraei$aei<1,]#
+probs <- c(0.025, 0.16, 0.5, 0.84)#
+q <- quantile(useraei$aei, probs, names=FALSE)#
+aei <- dataei$aei#
+d1 <- dataei[aei<q[1],]#
+d2 <- dataei[aei>=q[1],]#
+d2 <- d2[d2$aei<q[2],]#
+d3 <- dataei[aei>=q[2],]#
+d3 <- d3[d3$aei<q[3],]#
+d4 <- dataei[aei>=q[3],]#
+d4 <- d4[d4$aei<q[4],]#
+d5 <- dataei[aei>=q[4],]
+useraei$aei
+names(useraei)
+useraei <- read.table("aei-1995.txt", col.names=c("aei"))
+names(useraei)
+useraei <- useraei[useraei$aei<1,]
+names(useraei)
+useraei$aei
+useraei <- read.table("aei-1995.txt", col.names=c("aei"))
+useraei$aei
+useraei$aei<1
+useraei <- useraei[useraei$aei<1,]
+useraei
+q <- quantile(useraei, probs, names=FALSE)
+aei <- dataei$aei#
+d1 <- dataei[aei<q[1],]#
+d2 <- dataei[aei>=q[1],]#
+d2 <- d2[d2$aei<q[2],]#
+d3 <- dataei[aei>=q[2],]#
+d3 <- d3[d3$aei<q[3],]#
+d4 <- dataei[aei>=q[3],]#
+d4 <- d4[d4$aei<q[4],]#
+d5 <- dataei[aei>=q[4],]
+makebarplot <- function(f, maintitle) {#
+m1 <- glm(f, data=d1, family="binomial")#
+m2 <- glm(f, data=d2, family="binomial")#
+m3 <- glm(f, data=d3, family="binomial")#
+m4 <- glm(f, data=d4, family="binomial")#
+m5 <- glm(f, data=d5, family="binomial")#
+C1<-coef(m1)#
+C2<-coef(m2)#
+C3<-coef(m3)#
+C4<-coef(m4)#
+C5<-coef(m5)#
+ci1<-confint.default(m1, level=0.9)#
+ci2<-confint.default(m2, level=0.9)#
+ci3<-confint.default(m3, level=0.9)#
+ci4<-confint.default(m4, level=0.9)#
+ci5<-confint.default(m5, level=0.9)#
+coefmat <- rbind(C1,C2,C3,C4,C5)[,2:length(coef(m1))]#
+cilmat <- rbind(ci1[,1],ci2[,1],ci3[,1],ci4[,1],ci5[,1])[,2:length(coef(m1))]#
+ciumat <- rbind(ci1[,2],ci2[,2],ci3[,2],ci4[,2],ci5[,2])[,2:length(coef(m1))]#
+#
+library(RColorBrewer)#
+#mycolor = c("lightblue", "mistyrose", "lightcyan", "lavender", "cornsilk")library(RColorBrewer)#
+mycolor<-brewer.pal(5,"Pastel1")#
+leg=c("Innovator", "Early adopter", "Early majority", "Late majority", "Laggard")#
+#postscript("fig-aei.eps")#
+library(gplots)#
+barplot2(coefmat, beside=TRUE, col=mycolor, ci.u=ciumat, ci.l=cilmat,plot.grid=FALSE, axes=TRUE, plot.ci=TRUE, main=maintitle)#
+#dev.off()	#
+}#
+#
+par(mfrow = c(2, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(2.3, 3.5, 3, 2.3), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm, "social influence")#
+#makebarplot(adopted~cpop) # follow same trend as inflnorm#
+makebarplot(adopted~rinflccc, "competitor influence \n(average)")#
+makebarplot(adopted~rinflcsum, "competitor influence\n (sum)")#
+#makebarplot(adopted~rinflpsum) # follow same trend as rinflcsum#
+makebarplot(adopted~rinflpcc, "collaborator influence\n (average)")
+par(mfrow = c(2, 3))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(2.3, 3.5, 3, 2.3), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm, "social influence")#
+makebarplot(adopted~cpop, "innovation popularity") # follow same trend as inflnorm#
+makebarplot(adopted~rinflccc, "competitor influence \n(average)")#
+makebarplot(adopted~rinflcsum, "competitor influence\n (sum)")#
+makebarplot(adopted~rinflpsum, "collaborator influence\n (average)") # follow same trend as rinflcsum#
+makebarplot(adopted~rinflpcc, "collaborator influence\n (average)")
+par(mfrow = c(2, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(2.3, 3.5, 3, 2.3), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm, "social influence")#
+makebarplot(adopted~cpop, "innovation popularity") # follow same trend as inflnorm#
+#makebarplot(adopted~rinflccc, "competitor influence \n(average)")#
+makebarplot(adopted~rinflcsum, "competitor influence\n (sum)")#
+makebarplot(adopted~rinflpsum, "collaborator influence\n (sum)") # follow same trend as rinflcsum#
+#makebarplot(adopted~rinflpcc, "collaborator influence\n (average)")
+par(mfrow = c(2, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(2.3, 3.5, 3, 2.3), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm, "social influence")#
+makebarplot(adopted~cpop, "innovation popularity") # follow same trend as inflnorm#
+#makebarplot(adopted~rinflccc, "competitor influence \n(average)")#
+makebarplot(adopted~rinflcsum, "competitor influence")#
+makebarplot(adopted~rinflpsum, "collaborator influence") # follow same trend as rinflcsum#
+#makebarplot(adopted~rinflpcc, "collaborator influence\n (average)")
+q
+d1
+dim(d1)
+dim(d2)
+dim(d3)
+dim(d4)
+dim(d5)
+expression(alpha)
+paste(expression(alpha), "abc")
+dat2s <- dat2[dat2$rlv>0.1,]
+expression("U prestige B")
+help(expression)
+% generate heatmap for correlation marix#
+datcor <- dat2s[sample(1:nrow(dat2s), 10000), c("cage", "cpop", "rlv", "wdgc","wdgp", "infl", "rinflc", "rinflp", "rinflccc","rinflpcc", "etr", "cpreslogt10", "upresclog", "uprespmilog")]#
+names <- c("I active years", "I popularity", "relevance", "I degree A", "I degree B", "U influence", "preference A", "preference B", "I influence A", "I influence B", "U diversity", "I prestige", "U prestige A", expression("U prestige Psi"))#
+cormat <- cor(datcor)#
+library(RColorBrewer)#
+mypalette<-brewer.pal(9,"Oranges")#
+heatmap(cormat, symm=TRUE, col=mypalette, labRow=names, labCol=names, margins=c(10,10), cexRow=1.7, cexCol=1.7)
+% generate heatmap for correlation marix#
+datcor <- dat2s[sample(1:nrow(dat2s), 10000), c("cage", "cpop", "rlv", "wdgc","wdgp", "infl", "rinflc", "rinflp", "rinflccc","rinflpcc", "etr", "cpreslogt10", "upresclog", "uprespmilog")]#
+names <- c("I active years", "I popularity", "relevance", "I degree A", "I degree B", "U influence", "preference A", "preference B", "I influence A", "I influence B", "U diversity", "I prestige", "U prestige A", expression("Psi"))#
+cormat <- cor(datcor)#
+library(RColorBrewer)#
+mypalette<-brewer.pal(9,"Oranges")#
+heatmap(cormat, symm=TRUE, col=mypalette, labRow=names, labCol=names, margins=c(10,10), cexRow=1.7, cexCol=1.7)
+% generate heatmap for correlation marix#
+datcor <- dat2s[sample(1:nrow(dat2s), 10000), c("cage", "cpop", "rlv", "wdgc","wdgp", "infl", "rinflc", "rinflp", "rinflccc","rinflpcc", "etr", "cpreslogt10", "upresclog", "uprespmilog")]#
+names <- c("I active years", "I popularity", "relevance", "I degree A", "I degree B", "U influence", "preference A", "preference B", "I influence A", "I influence B", "U diversity", "I prestige", "U prestige A", expression(Psi))#
+cormat <- cor(datcor)#
+library(RColorBrewer)#
+mypalette<-brewer.pal(9,"Oranges")#
+heatmap(cormat, symm=TRUE, col=mypalette, labRow=names, labCol=names, margins=c(10,10), cexRow=1.7, cexCol=1.7)
+% generate heatmap for correlation marix#
+datcor <- dat2s[sample(1:nrow(dat2s), 10000), c("cage", "cpop", "rlv", "wdgc","wdgp", "infl", "rinflc", "rinflp", "rinflccc","rinflpcc", "etr", "cpreslogt10", "upresclog", "uprespmilog")]#
+names <- c("I active years", "I popularity", "relevance", "I degree A", "I degree B", "U influence", "preference A", "preference B", "I influence A", "I influence B", "U diversity", "I prestige", "U prestige A", expression(paste("U Prestige", Psi)))#
+cormat <- cor(datcor)#
+library(RColorBrewer)#
+mypalette<-brewer.pal(9,"Oranges")#
+heatmap(cormat, symm=TRUE, col=mypalette, labRow=names, labCol=names, margins=c(10,10), cexRow=1.7, cexCol=1.7)
+% generate heatmap for correlation marix#
+datcor <- dat2s[sample(1:nrow(dat2s), 10000), c("cage", "cpop", "rlv", "wdgc","wdgp", "infl", "rinflc", "rinflp", "rinflccc","rinflpcc", "etr", "cpreslogt10", "upresclog", "uprespmilog")]#
+names <- c("I active years", "I popularity", "relevance", "I degree A", "I degree B", "U influence", "preference A", "preference B", "I influence A", "I influence B", "U diversity", "I prestige", "U prestige A", expression(paste("U Prestige_", Psi)))#
+cormat <- cor(datcor)#
+library(RColorBrewer)#
+mypalette<-brewer.pal(9,"Oranges")#
+heatmap(cormat, symm=TRUE, col=mypalette, labRow=names, labCol=names, margins=c(10,10), cexRow=1.7, cexCol=1.7)
+% generate heatmap for correlation marix#
+datcor <- dat2s[sample(1:nrow(dat2s), 10000), c("cage", "cpop", "rlv", "wdgc","wdgp", "infl", "rinflc", "rinflp", "rinflccc","rinflpcc", "etr", "cpreslogt10", "upresclog", "uprespmilog")]#
+names <- c("I active years", "I popularity", "relevance", "I degree A", "I degree B", "U influence", "preference A", "preference B", "I influence A", "I influence B", "U diversity", "I prestige", expression(paste("U prestige_", Phi), expression(paste("U Prestige_", Psi)))#
+cormat <- cor(datcor)#
+library(RColorBrewer)#
+mypalette<-brewer.pal(9,"Oranges")#
+heatmap(cormat, symm=TRUE, col=mypalette, labRow=names, labCol=names, margins=c(10,10), cexRow=1.7, cexCol=1.7)
+% generate heatmap for correlation marix#
+datcor <- dat2s[sample(1:nrow(dat2s), 10000), c("cage", "cpop", "rlv", "wdgc","wdgp", "infl", "rinflc", "rinflp", "rinflccc","rinflpcc", "etr", "cpreslogt10", "upresclog", "uprespmilog")]#
+names <- c("I active years", "I popularity", "relevance", "I degree A", "I degree B", "U influence", "preference A", "preference B", "I influence A", "I influence B", "U diversity", "I prestige", expression(paste("U prestige_", Phi)), expression(paste("U Prestige_", Psi)))#
+cormat <- cor(datcor)#
+library(RColorBrewer)#
+mypalette<-brewer.pal(9,"Oranges")#
+heatmap(cormat, symm=TRUE, col=mypalette, labRow=names, labCol=names, margins=c(10,10), cexRow=1.7, cexCol=1.7)
+datcor <- dat2s[sample(1:nrow(dat2s), 10000), c("cage", "cpop", "rlv", "wdgc","wdgp", "infl", "rinflc", "rinflp", "rinflccc","rinflpcc", "etr", "cpreslogt10", "upresclog", "uprespmilog")]#
+names <- c("I active years", "I popularity", "relevance", expression(paste("I degree_", Phi)), expression(paste("I degree_", Psi)), expression(paste("U influence_", Omiga)), expression(paste("preference_", Phi)), expression(paste("preference_", Psi)), expression(paste("I influence_", Phi)), expression(paste("I influence_", Psi)), "U diversity", expression(paste("I prestige_", Omega)), expression(paste("U prestige_", Phi)), expression(paste("U Prestige_", Psi)))#
+cormat <- cor(datcor)#
+library(RColorBrewer)#
+mypalette<-brewer.pal(9,"Oranges")#
+heatmap(cormat, symm=TRUE, col=mypalette, labRow=names, labCol=names, margins=c(10,10), cexRow=1.7, cexCol=1.7)
+% generate heatmap for correlation marix#
+datcor <- dat2s[sample(1:nrow(dat2s), 10000), c("cage", "cpop", "rlv", "wdgc","wdgp", "infl", "rinflc", "rinflp", "rinflccc","rinflpcc", "etr", "cpreslogt10", "upresclog", "uprespmilog")]#
+names <- c("I active years", "I popularity", "relevance", expression(paste("I degree_", Phi)), expression(paste("I degree_", Psi)), expression(paste("U influence_", Omega)), expression(paste("preference_", Phi)), expression(paste("preference_", Psi)), expression(paste("I influence_", Phi)), expression(paste("I influence_", Psi)), "U diversity", expression(paste("I prestige_", Omega)), expression(paste("U prestige_", Phi)), expression(paste("U Prestige_", Psi)))#
+cormat <- cor(datcor)#
+library(RColorBrewer)#
+mypalette<-brewer.pal(9,"Oranges")#
+heatmap(cormat, symm=TRUE, col=mypalette, labRow=names, labCol=names, margins=c(10,10), cexRow=1.7, cexCol=1.7)
+% generate heatmap for correlation marix#
+datcor <- dat2s[sample(1:nrow(dat2s), 10000), c("cage", "cpop", "rlv", "wdgc","wdgp", "infl", "rinflc", "rinflp", "rinflccc","rinflpcc", "etr", "cpreslogt10", "upresclog", "uprespmilog")]#
+names <- c("I active years", "I popularity", "relevance", expression(paste("I degree_", Phi)), expression(paste("I degree_", Psi)), expression(paste("U influence_", Omega)), expression(paste("preference_", Phi)), expression(paste("preference_", Psi)), expression(paste("I influence_", Phi)), expression(paste("I influence_", Psi)), "U diversity", expression(paste("I prestige_", Omega)), expression(paste("U prestige_", Phi)), expression(paste("U prestige_", Psi)))#
+cormat <- cor(datcor)#
+library(RColorBrewer)#
+mypalette<-brewer.pal(9,"Oranges")#
+heatmap(cormat, symm=TRUE, col=mypalette, labRow=names, labCol=names, margins=c(10,10), cexRow=1.7, cexCol=1.7)
+help(boxplot)
+generate heatmap for correlation marix#
+datcor <- dat2s[sample(1:nrow(dat2s), 10000), c("cage", "cpop", "rlv", "wdgc","wdgp", "infl", "rinflc", "rinflp", "rinflccc","rinflpcc", "etr", "cpreslogt10", "upresclog", "uprespmilog")]#
+names <- c("I active years", "I popularity", "relevance", expression(paste("I degree_", Phi)), expression(paste("I degree_", Psi)), expression(paste("influence_", Omega)), expression(paste("preference_", Phi)), expression(paste("preference_", Psi)), expression(paste("influence_", Phi)), expression(paste("influence_", Psi)), "U diversity", expression(paste("I prestige_", Omega)), expression(paste("U prestige_", Phi)), expression(paste("U prestige_", Psi)))#
+cormat <- cor(datcor)#
+library(RColorBrewer)#
+mypalette<-brewer.pal(9,"Oranges")#
+heatmap(cormat, symm=TRUE, col=mypalette, labRow=names, labCol=names, margins=c(10,10), cexRow=1.7, cexCol=1.7)
+0.45*109
+help(cor)
+help(heatmap)
+nrow(dat2s)
+help(heatmap)
+ls()
+load("data/dat2.RData")
+dat2s <- dat2[dat2$rlv>0.1,]
+generate heatmap for correlation marix#
+datcor <- dat2s[sample(1:nrow(dat2s), 10000), c("cage", "cpop", "rlv", "wdgc","wdgp", "infl", "rinflc", "rinflp", "rinflccc","rinflpcc", "cpreslogt10", "upresclog", "uprespmilog")]#
+names <- c("I active years", "I popularity", "relevance", expression(paste("I degree_", Phi)), expression(paste("I degree_", Psi)), expression(paste("influence_", Omega)), expression(paste("preference_", Phi)), expression(paste("preference_", Psi)), expression(paste("influence_", Phi)), expression(paste("influence_", Psi)),  expression(paste("I prestige_", Omega)), expression(paste("U prestige_", Phi)), expression(paste("U prestige_", Psi)))#
+cormat <- cor(datcor)#
+library(RColorBrewer)#
+mypalette<-brewer.pal(9,"Oranges")#
+heatmap(cormat, symm=TRUE, col=mypalette, labRow=names, labCol=names, margins=c(10,10), cexRow=1.7, cexCol=1.7)
+generate heatmap for correlation marix#
+datcor <- dat2s[sample(1:nrow(dat2s), 10000), c("cage", "cpop", "rlv", "wdgc","wdgp", "infl", "rinflc", "rinflp", "rinflccc","rinflpcc", "cpreslogt10", "upresclog", "uprespmilog")]#
+names <- c("I active years", "I popularity", "relevance", expression(paste("I degree_", Phi)), expression(paste("I degree_", Psi)), expression(paste("influence_", Omega)), expression(paste("preference_", Phi)), expression(paste("preference_", Psi)), expression(paste("influence_", Phi)), expression(paste("influence_", Psi)),  expression(paste("I prestige_", Omega)), expression(paste("U prestige_", Phi)), expression(paste("U prestige_", Psi)))#
+cormat <- cor(datcor)#
+library(RColorBrewer)#
+mypalette<-brewer.pal(9,"Oranges")#
+heatmap(cormat, symm=TRUE, col=mypalette, labRow=names, labCol=names, margins=c(12,12), cexRow=1.7, cexCol=1.7)
+heatmap(cormat, symm=TRUE, col=mypalette, labRow=names, labCol=names, margins=c(12,10), cexRow=1.7, cexCol=1.7)
+load("weight distribution/w.RData")
+par(mfrow = c(1, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(3, 3, 3, 0), oma = c(1, 1, 1, 1))#
+#plot(exp(dc$x), dc$y, log="x", type="l", main="edge weight (competitor)\n#edges=1,366,203", xlab="", ylab="")+grid()#
+#plot(exp(dp$x), dp$y, log="x", type="l", main="edge weight (collaborator)\n#edges=294,958", xlab="", ylab="")+grid()#
+plot(ddc, main="weighted deg (competitor)\n#nodes=1,692", xlab="", ylab="")+grid()#
+plot(ddp, main="weighted deg (collaborator)\n#nodes=1,692", xlab="", ylab="")+grid()
+dc <- density(log(wc$V1))#
+wp <- wp[wp$V1>0,]#
+dp <- density(log(wp$V1))#
+ddc <- density(wdgc$V1)#
+ddp <- density(wdgp$V1)#
+#
+par(mfrow = c(1, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(3, 3, 3, 0), oma = c(1, 1, 1, 1))#
+#plot(exp(dc$x), dc$y, log="x", type="l", main="edge weight (competitor)\n#edges=1,366,203", xlab="", ylab="")+grid()#
+#plot(exp(dp$x), dp$y, log="x", type="l", main="edge weight (collaborator)\n#edges=294,958", xlab="", ylab="")+grid()#
+plot(ddc, main="weighted deg (competitor)\n#nodes=1,692", xlab="", ylab="")+grid()#
+plot(ddp, main="weighted deg (collaborator)\n#nodes=1,692", xlab="", ylab="")+grid()
+par(mfrow = c(1, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(3, 3, 3, 0), oma = c(1, 1, 1, 1))#
+#plot(exp(dc$x), dc$y, log="x", type="l", main="edge weight (competitor)\n#edges=1,366,203", xlab="", ylab="")+grid()#
+#plot(exp(dp$x), dp$y, log="x", type="l", main="edge weight (collaborator)\n#edges=294,958", xlab="", ylab="")+grid()#
+plot(ddc, main="competitor network\n#nodes=1,692", xlab="", ylab="")+grid()#
+plot(ddp, main="collaborator network\n#nodes=1,692", xlab="", ylab="")+grid()
+par(mfrow = c(1, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(3, 2, 3, 0), oma = c(0, 0, 0, 0))#
+#plot(exp(dc$x), dc$y, log="x", type="l", main="edge weight (competitor)\n#edges=1,366,203", xlab="", ylab="")+grid()#
+#plot(exp(dp$x), dp$y, log="x", type="l", main="edge weight (collaborator)\n#edges=294,958", xlab="", ylab="")+grid()#
+plot(ddc, main="competitor network\n#nodes=1,692", xlab="", ylab="")+grid()#
+plot(ddp, main="collaborator network\n#nodes=1,692", xlab="", ylab="")+grid()
+par(mfrow = c(1, 2))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(3, 2, 3, 0), oma = c(1, 1, 1, 1))#
+#plot(exp(dc$x), dc$y, log="x", type="l", main="edge weight (competitor)\n#edges=1,366,203", xlab="", ylab="")+grid()#
+#plot(exp(dp$x), dp$y, log="x", type="l", main="edge weight (collaborator)\n#edges=294,958", xlab="", ylab="")+grid()#
+plot(ddc, main="competitor network\n#nodes=1,692", xlab="", ylab="")+grid()#
+plot(ddp, main="collaborator network\n#nodes=1,692", xlab="", ylab="")+grid()
+par(mfrow = c(1, 2))#
+par(cex.lab=1.2, cex.axis=1.2, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(2, 2, 2, 0), oma = c(1, 1, 1, 1))#
+#plot(exp(dc$x), dc$y, log="x", type="l", main="edge weight (competitor)\n#edges=1,366,203", xlab="", ylab="")+grid()#
+#plot(exp(dp$x), dp$y, log="x", type="l", main="edge weight (collaborator)\n#edges=294,958", xlab="", ylab="")+grid()#
+plot(ddc, main="competitor network\n#nodes=1,692", xlab="", ylab="")+grid()#
+plot(ddp, main="collaborator network\n#nodes=1,692", xlab="", ylab="")+grid()
+par(mfrow = c(1, 2))#
+par(cex.lab=1.2, cex.axis=1.2, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(2, 3, 2, 0), oma = c(1, 1, 1, 1))#
+#plot(exp(dc$x), dc$y, log="x", type="l", main="edge weight (competitor)\n#edges=1,366,203", xlab="", ylab="")+grid()#
+#plot(exp(dp$x), dp$y, log="x", type="l", main="edge weight (collaborator)\n#edges=294,958", xlab="", ylab="")+grid()#
+plot(ddc, main="competitor network\n#nodes=1,692", xlab="", ylab="")+grid()#
+plot(ddp, main="collaborator network\n#nodes=1,692", xlab="", ylab="")+grid()
+par(mfrow = c(1, 2))#
+par(cex.lab=1.2, cex.axis=1.2, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(3, 2, 2, 0), oma = c(1, 1, 1, 1))#
+#plot(exp(dc$x), dc$y, log="x", type="l", main="edge weight (competitor)\n#edges=1,366,203", xlab="", ylab="")+grid()#
+#plot(exp(dp$x), dp$y, log="x", type="l", main="edge weight (collaborator)\n#edges=294,958", xlab="", ylab="")+grid()#
+plot(ddc, main="competitor network\n#nodes=1,692", xlab="", ylab="")+grid()#
+plot(ddp, main="collaborator network\n#nodes=1,692", xlab="", ylab="")+grid()
+par(mfrow = c(1, 2))#
+par(cex.lab=1.2, cex.axis=1.2, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(3, 3, 3, 0), oma = c(1, 1, 1, 1))#
+#plot(exp(dc$x), dc$y, log="x", type="l", main="edge weight (competitor)\n#edges=1,366,203", xlab="", ylab="")+grid()#
+#plot(exp(dp$x), dp$y, log="x", type="l", main="edge weight (collaborator)\n#edges=294,958", xlab="", ylab="")+grid()#
+plot(ddc, main="competitor network\n#nodes=1,692", xlab="", ylab="")+grid()#
+plot(ddp, main="collaborator network\n#nodes=1,692", xlab="", ylab="")+grid()
+ls()
+% adoptor variance analysis#
+useraei <- read.table("aei-1995.txt", col.names=c("aei"))#
+useraeisample <- useraei[sample(nrow(useraei), 5000),]#
+useraei <- useraei[useraei$aei<1,]#
+probs <- c(0.025, 0.16, 0.5, 0.84)#
+q <- quantile(useraei, probs, names=FALSE)#
+aei <- dataei$aei#
+d1 <- dataei[aei<q[1],]#
+d2 <- dataei[aei>=q[1],]#
+d2 <- d2[d2$aei<q[2],]#
+d3 <- dataei[aei>=q[2],]#
+d3 <- d3[d3$aei<q[3],]#
+d4 <- dataei[aei>=q[3],]#
+d4 <- d4[d4$aei<q[4],]#
+d5 <- dataei[aei>=q[4],]#
+#
+makebarplot <- function(f, maintitle) {#
+m1 <- glm(f, data=d1, family="binomial")#
+m2 <- glm(f, data=d2, family="binomial")#
+m3 <- glm(f, data=d3, family="binomial")#
+m4 <- glm(f, data=d4, family="binomial")#
+m5 <- glm(f, data=d5, family="binomial")#
+C1<-coef(m1)#
+C2<-coef(m2)#
+C3<-coef(m3)#
+C4<-coef(m4)#
+C5<-coef(m5)#
+ci1<-confint.default(m1, level=0.9)#
+ci2<-confint.default(m2, level=0.9)#
+ci3<-confint.default(m3, level=0.9)#
+ci4<-confint.default(m4, level=0.9)#
+ci5<-confint.default(m5, level=0.9)#
+coefmat <- rbind(C1,C2,C3,C4,C5)[,2:length(coef(m1))]#
+cilmat <- rbind(ci1[,1],ci2[,1],ci3[,1],ci4[,1],ci5[,1])[,2:length(coef(m1))]#
+ciumat <- rbind(ci1[,2],ci2[,2],ci3[,2],ci4[,2],ci5[,2])[,2:length(coef(m1))]#
+#
+library(RColorBrewer)#
+#mycolor = c("lightblue", "mistyrose", "lightcyan", "lavender", "cornsilk")library(RColorBrewer)#
+mycolor<-brewer.pal(5,"Pastel1")#
+leg=c("Innovator", "Early adopter", "Early majority", "Late majority", "Laggard")#
+#postscript("fig-aei.eps")#
+library(gplots)#
+barplot2(coefmat, beside=TRUE, col=mycolor, ci.u=ciumat, ci.l=cilmat,plot.grid=FALSE, axes=TRUE, plot.ci=TRUE, main=maintitle)#
+#dev.off()	#
+}#
+#
+par(mfrow = c(1, 3))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(2.3, 3.5, 3, 2.3), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm, "social influence")#
+#makebarplot(adopted~cpop, "innovation popularity") # follow same trend as inflnorm#
+#makebarplot(adopted~rinflccc, "competitor influence \n(average)")#
+makebarplot(adopted~rinflcsum, "competitor influence")#
+makebarplot(adopted~rinflpsum, "collaborator influence") # follow same trend as rinflcsum#
+#makebarplot(adopted~rinflpcc, "collaborator influence\n (average)")
+useraei <- read.table("aei-1995.txt", col.names=c("aei"))
+useraei <- useraei[useraei$aei<1,]
+dim(useraei)
+length(useraei)
+dat2s <- dat2[dat2$rlv>0.1,]
+dat2ss <- dat2s[sample(1:nrow(dat2s), 10000), c("wdgc","wdgp","rinflccc","rinflpcc", "cupresdiffc", "cupresdiffp", "adopted")]
+load("data/dat2.RData")
+dat2s <- dat2[dat2$rlv>0.1,]
+% adoptor variance analysis#
+useraei <- read.table("aei-1995.txt", col.names=c("aei"))#
+useraeisample <- useraei[sample(nrow(useraei), 5000),]#
+useraei <- useraei[useraei$aei<1,]#
+probs <- c(0.025, 0.16, 0.5, 0.84)#
+q <- quantile(useraei, probs, names=FALSE)#
+dataei <- dat2s#
+aei <- dataei$aei#
+d1 <- dataei[aei<q[1],]#
+d2 <- dataei[aei>=q[1],]#
+d2 <- d2[d2$aei<q[2],]#
+d3 <- dataei[aei>=q[2],]#
+d3 <- d3[d3$aei<q[3],]#
+d4 <- dataei[aei>=q[3],]#
+d4 <- d4[d4$aei<q[4],]#
+d5 <- dataei[aei>=q[4],]#
+#
+makebarplot <- function(f, maintitle) {#
+m1 <- glm(f, data=d1, family="binomial")#
+m2 <- glm(f, data=d2, family="binomial")#
+m3 <- glm(f, data=d3, family="binomial")#
+m4 <- glm(f, data=d4, family="binomial")#
+m5 <- glm(f, data=d5, family="binomial")#
+C1<-coef(m1)#
+C2<-coef(m2)#
+C3<-coef(m3)#
+C4<-coef(m4)#
+C5<-coef(m5)#
+ci1<-confint.default(m1, level=0.9)#
+ci2<-confint.default(m2, level=0.9)#
+ci3<-confint.default(m3, level=0.9)#
+ci4<-confint.default(m4, level=0.9)#
+ci5<-confint.default(m5, level=0.9)#
+coefmat <- rbind(C1,C2,C3,C4,C5)[,2:length(coef(m1))]#
+cilmat <- rbind(ci1[,1],ci2[,1],ci3[,1],ci4[,1],ci5[,1])[,2:length(coef(m1))]#
+ciumat <- rbind(ci1[,2],ci2[,2],ci3[,2],ci4[,2],ci5[,2])[,2:length(coef(m1))]#
+#
+library(RColorBrewer)#
+#mycolor = c("lightblue", "mistyrose", "lightcyan", "lavender", "cornsilk")library(RColorBrewer)#
+mycolor<-brewer.pal(5,"Pastel1")#
+leg=c("Innovator", "Early adopter", "Early majority", "Late majority", "Laggard")#
+#postscript("fig-aei.eps")#
+library(gplots)#
+barplot2(coefmat, beside=TRUE, col=mycolor, ci.u=ciumat, ci.l=cilmat,plot.grid=FALSE, axes=TRUE, plot.ci=TRUE, main=maintitle)#
+#dev.off()	#
+}#
+#
+par(mfrow = c(1, 3))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(2.3, 3.5, 3, 2.3), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm, "social influence")#
+#makebarplot(adopted~cpop, "innovation popularity") # follow same trend as inflnorm#
+#makebarplot(adopted~rinflccc, "competitor influence \n(average)")#
+makebarplot(adopted~rinflcsum, "competitor influence")#
+makebarplot(adopted~rinflpsum, "collaborator influence") # follow same trend as rinflcsum#
+#makebarplot(adopted~rinflpcc, "collaborator influence\n (average)")
+plot aei distribution of users at 1995#
+useraei <- read.table("aei-1995.txt", col.names=c("aei"))#
+useraeisample <- useraei[sample(nrow(useraei), 5000),]#
+useraei <- useraei[useraei$aei<1,]#
+shapiro.test(useraeisample)#
+qqnorm(useraeisample)#
+qqline(useraeisample, col=1)#
+summary(useraei)#
+mean(useraei)#
+sd(useraei)
+adoptor variance analysis#
+useraei <- read.table("aei-1995.txt", col.names=c("aei"))#
+useraeisample <- useraei[sample(nrow(useraei), 5000),]#
+useraei <- useraei[useraei$aei<1,]#
+probs <- c(0.025, 0.16, 0.5, 0.84)#
+q <- quantile(useraei, probs, names=FALSE)#
+dataei <- dat2s#
+aei <- dataei$aei#
+d1 <- dataei[aei<q[1],]#
+d2 <- dataei[aei>=q[1],]#
+d2 <- d2[d2$aei<q[2],]#
+d3 <- dataei[aei>=q[2],]#
+d3 <- d3[d3$aei<q[3],]#
+d4 <- dataei[aei>=q[3],]#
+d4 <- d4[d4$aei<q[4],]#
+d5 <- dataei[aei>=q[4],]#
+#
+makebarplot <- function(f, maintitle) {#
+m1 <- glm(f, data=d1, family="binomial")#
+m2 <- glm(f, data=d2, family="binomial")#
+m3 <- glm(f, data=d3, family="binomial")#
+m4 <- glm(f, data=d4, family="binomial")#
+m5 <- glm(f, data=d5, family="binomial")#
+C1<-coef(m1)#
+C2<-coef(m2)#
+C3<-coef(m3)#
+C4<-coef(m4)#
+C5<-coef(m5)#
+ci1<-confint.default(m1, level=0.9)#
+ci2<-confint.default(m2, level=0.9)#
+ci3<-confint.default(m3, level=0.9)#
+ci4<-confint.default(m4, level=0.9)#
+ci5<-confint.default(m5, level=0.9)#
+coefmat <- rbind(C1,C2,C3,C4,C5)[,2:length(coef(m1))]#
+cilmat <- rbind(ci1[,1],ci2[,1],ci3[,1],ci4[,1],ci5[,1])[,2:length(coef(m1))]#
+ciumat <- rbind(ci1[,2],ci2[,2],ci3[,2],ci4[,2],ci5[,2])[,2:length(coef(m1))]#
+#
+library(RColorBrewer)#
+#mycolor = c("lightblue", "mistyrose", "lightcyan", "lavender", "cornsilk")library(RColorBrewer)#
+mycolor<-brewer.pal(5,"Pastel1")#
+leg=c("Innovator", "Early adopter", "Early majority", "Late majority", "Laggard")#
+#postscript("fig-aei.eps")#
+library(gplots)#
+barplot2(coefmat, beside=TRUE, col=mycolor, ci.u=ciumat, ci.l=cilmat,plot.grid=FALSE, axes=TRUE, plot.ci=TRUE, main=maintitle)#
+#dev.off()	#
+}#
+#
+par(mfrow = c(1, 3))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(2.3, 3.5, 3, 2.3), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm, "social influence")#
+#makebarplot(adopted~cpop, "innovation popularity") # follow same trend as inflnorm#
+#makebarplot(adopted~rinflccc, "competitor influence \n(average)")#
+makebarplot(adopted~rinflcsum, "competitor influence")#
+makebarplot(adopted~rinflpsum, "collaborator influence") # follow same trend as rinflcsum#
+#makebarplot(adopted~rinflpcc, "collaborator influence\n (average)")
+par(mfrow = c(1, 3))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(2, 2, 2, 0), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm, "social influence")#
+#makebarplot(adopted~cpop, "innovation popularity") # follow same trend as inflnorm#
+#makebarplot(adopted~rinflccc, "competitor influence \n(average)")#
+makebarplot(adopted~rinflcsum, "competitor influence")#
+makebarplot(adopted~rinflpsum, "collaborator influence") # follow same trend as rinflcsum#
+#makebarplot(adopted~rinflpcc, "collaborator influence\n (average)")
+par(mfrow = c(1, 3))#
+par(cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)#
+par(mar = c(2, 2.5, 2, 0), oma = c(1, 1, 1, 1))#
+makebarplot(adopted~inflnorm, "social influence")#
+#makebarplot(adopted~cpop, "innovation popularity") # follow same trend as inflnorm#
+#makebarplot(adopted~rinflccc, "competitor influence \n(average)")#
+makebarplot(adopted~rinflcsum, "competitor influence")#
+makebarplot(adopted~rinflpsum, "collaborator influence") # follow same trend as rinflcsum#
+#makebarplot(adopted~rinflpcc, "collaborator influence\n (average)")
+library(igraph)
+help(igraph)
+ls()
+laod("dat.RData")
+load("dat.RData")
+ls()
+dat
+boxplot(wt~byear, dat)
+boxplot(wt~byear, dat, ylim=c(0,200))
+boxplot(wt~byear, dat, ylim=c(0,150))
+boxplot(wt~byear, dat, ylim=c(0,150), main="Waiting time")
+table(wt~byear)
+table(dat$byear)
+hist(table(dat$byear))
+plot(table(dat$byear))
+boxplot(table(dat$byear))
+plot(table(dat$byear), main="Number of cases by year")
+dat2 <- dat[dat$byear>=2009]
+dat2 <- dat[dat$byear>=2009,]
+boxplot(wt~bmonth, dat1, main="Waiting time")
+boxplot(wt~bmonth, dat2, main="Waiting time")
+boxplot(wt~bmonth, dat2, ylim=c(0,150), main="Waiting time")
+boxplot(wt~bmonth, dat2, ylim=c(0,100), main="Waiting time")
+boxplot(wt~bmonth, dat2, ylim=c(0,100), main="Waiting time by month")
+boxplot(wt~bday, dat2, ylim=c(0,100), main="Waiting time by date")
+boxplot(wt~type, ylim=c(0,100), main="Waiting time by type")
+boxplot(wt~type, dat2, ylim=c(0,100), main="Waiting time by type")
+boxplot(wt~type, dat2, ylim=c(0,100), main="Waiting time by visa type")
+boxplot(wt~entry, dat2, ylim=c(0,100), main="Waiting time by visa entry")
+boxplot(wt~major, dat2, ylim=c(0,100), main="Waiting time by major")
+help(boxplot)
+boxplot(wt~major, dat2, ylim=c(0,100), subset=c("Chemistry"), main="Waiting time by major")
+boxplot(wt~major, dat2, ylim=c(0,100), main="Waiting time by major")
+boxplot(wt~major, dat2[dat2$major=="Chemistry"], ylim=c(0,100), main="Waiting time by major")
+boxplot(wt~major, dat2[dat2$major=="Chemistry",], ylim=c(0,100), main="Waiting time by major")
+boxplot(wt~major, ylim=c(0,100), main="Waiting time by major")
+boxplot(wt~major, dat2, ylim=c(0,100), main="Waiting time by major")
+boxplot(wt~city, dat2, ylim=c(0,100), main="Waiting time by city")
+names(dat2)
+boxplot(wt~type, dat2, ylim=c(0,100), main="Waiting time by visa type")
+%1
+1
+m1 <- lm(wt~major+city+type+entry+byear, dat=dat2)
+dat2 <- dat[dat$byear>=2009,]
+load("dat.RData")
+dat2 <- dat[dat$byear>=2009,]
+m1 <- lm(wt~major+city+type+entry+byear, dat=dat2)
+m1
+summary(m1)
+residuals(m1)
+boxplot(residuals)
+boxplot(residuals(m1))
+boxplot(residuals(m1), ylim=c(0,100))
+boxplot(residuals(m1), ylim=c(-100,100))
+plot(density(residuals(m1)))
+plot(density(residuals(m1)), xlim=c(-20,20))
+plot(density(residuals(m1)), xlim=c(-50,50))
+summary(residuals(m1))
+plot(density(residuals(m1)), xlim=c(-50,50))
+plot(density(residuals(m1)), xlim=c(-50,50), main="Prediction error")
+plot(density(residuals(m1)), xlim=c(-50,50), main="Distribution of prediction error")
+load("dat.RData")#
+boxplot(wt~byear, dat, ylim=c(0,150), main="Waiting time")#
+plot(table(dat$byear), main="Number of cases by year")#
+#
+dat2 <- dat[dat$byear>=2009,]#
+boxplot(wt~bmonth, dat2, ylim=c(0,100), main="Waiting time by month")#
+boxplot(wt~bday, dat2, ylim=c(0,100), main="Waiting time by date")#
+boxplot(wt~type, dat2, ylim=c(0,100), main="Waiting time by visa type")#
+boxplot(wt~entry, dat2, ylim=c(0,100), main="Waiting time by visa entry")#
+boxplot(wt~major, dat2, ylim=c(0,100), main="Waiting time by major")#
+boxplot(wt~city, dat2, ylim=c(0,100), main="Waiting time by city")#
+#
+# Linear Regression!#
+m1 <- lm(wt~major+city+type+entry+byear, dat=dat2)#
+plot(density(residuals(m1)), xlim=c(-50,50), main="Distribution of prediction error")
+summary(m1)
+load("dat.RData")
+boxplot(wt~byear, dat, ylim=c(0,150), main="Waiting time")
+dat2 <- dat[dat$byear>=2009,]
+m1 <- lm(wt~major+city+type+entry+byear, dat=dat2)
+summary(m1)
+m1 <- lm(wt~major+city+type+entry+byear+byear*entry, dat=dat2)
+summary(m1)
+m1 <- lm(wt~major+city+type+entry+byear+major*city, dat=dat2)
+summary(m1)
+plot(density(residuals(m1)), xlim=c(-50,50), main="Distribution of prediction error")
+plot(density(wt))
+plot(density(wt, data=dat))
+plot(density(dat$wt))
+plot(density(dat$wt), xlim=(0,100))
+plot(density(dat$wt), xlim=c(0,100))
+dat2 <- dat[dat$byear>=2012,]
+m1 <- lm(wt~major+city+type+entry+byear+major*city, dat=dat2)
+summary(m1)
+m1 <- lm(wt~major+city+type+entry+byear+bmonth+bday+major*city, dat=dat2)
+summary(m1)
+boxplot(wt~entry, dat2, ylim=c(0,100), main="Waiting time by visa entry")
+boxplot(wt~type, dat2, ylim=c(0,100), main="Waiting time by visa type")
+boxplot(wt~entry, dat2, ylim=c(0,100), main="Waiting time by visa entry")
+boxplot(wt~type, dat2, ylim=c(0,100), main="Waiting time by visa type")
+m1 <- lm(wt~major+city+type+entry+byear+bmonth+bday+major*city+major*entry, dat=dat2)
+summary(m1)
+setwd("~/Dropbox/STAT601 Project - Team BAMN/Mixed-Membership-Stochastic-Blockmodel")
+library(igraph)
+Y<-as.matrix(read.csv("data/Y_alpha0.1_K2_N20.txt", header=FALSE))
+help(heatmap)
+heatmap(Y)
+help(heatmap)
+help(heatmap, Rowv=NA, Colvv=NA)
+help(heatmap, Rowv=NA, Colv=NA)
+heatmap(Y,Rowv=NA, Colv=NA)
+heatmap(Y,Rowv=NA, Colv=NA, revC=FALSE)
+heatmap(Y,Rowv=NA, Colv=NA, revC=TRUE)
